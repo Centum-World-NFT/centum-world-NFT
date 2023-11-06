@@ -1,3 +1,4 @@
+import Header from "../../components/common/header/Header";
 import { SearchIcon } from "../../utils/icons";
 import {
   HeadingTitle,
@@ -13,6 +14,8 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 const NftCards = () => {
   return (
+    <>
+      <Header />
     <Wrapper>
       <HeadingDiv>
         <HeadingTitle variant="h3">
@@ -30,6 +33,7 @@ const NftCards = () => {
           </SearchBox>
       </HeadingDiv>
     </Wrapper>
+    </>
   );
 };
 
