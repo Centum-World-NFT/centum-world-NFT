@@ -1,8 +1,10 @@
+import HomePage from "./pages/homepage/HomePage"
+
 function App() {
 
   return (
     <>
-    <h1>CENTUM WORLD-NFTTTT</h1>
+    <HomePage />
     </>
   )
 }
