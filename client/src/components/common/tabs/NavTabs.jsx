@@ -4,6 +4,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import NftCollections from "@/pages/collections/NftCollections";
 import NftFilter from "../nftfilter/NftFilter";
 
 const NavTabs = () => {
@@ -26,7 +27,9 @@ const NavTabs = () => {
         <TabPanel value="1">
           <NftFilter/>
         </TabPanel>
-        <TabPanel value="2">Collections</TabPanel>
+        <TabPanel value="2">
+          <NftCollections/>
+        </TabPanel>
         
       </TabContext>
     </Box>
