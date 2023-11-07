@@ -73,3 +73,7 @@ export const IconContainer = styled("div")({
     top: "20px",
 })
 
+export const TabNftCard = styled("div")({
+    border:"1px solid black"
+})
+
