@@ -1,4 +1,3 @@
-import { Box, Button, InputAdornment, TextField } from "@mui/material";
 import {
   CartBox,
   CompanyName,
@@ -7,9 +6,11 @@ import {
   HeaderWrapper,
   IconBox,
   LinkBox,
+  LinkText,
   LoginButton,
   LogoBox,
   NavLink,
+  PopLinks,
   SearchBox,
   SearchInput,
 } from "./HeaderStyle";
@@ -18,8 +19,23 @@ import { DownArrow } from "@/utils/icons";
 import { KeyIcon } from "@/utils/icons";
 import { NavSearchIcon } from "@/utils/icons";
 import { CartIcon } from "@/utils/icons";
+import { Popover, Typography } from "@mui/material";
+import { useState } from "react";
 
 const Header = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
     <HeaderWrapper>
       <HeaderLeftContainer>
@@ -28,7 +44,7 @@ const Header = () => {
           <CompanyName>CENTUMO NFT’S</CompanyName>
         </LogoBox>
         <LinkBox>
-          <NavLink>
+          <NavLink onClick={handleClick}>
             Discover <DownArrow />{" "}
           </NavLink>
           <NavLink>
@@ -44,7 +60,7 @@ const Header = () => {
         <SearchBox>
           <SearchInput
             id="outlined-start-adornment"
-            label="Search"
+            placeholder="Search Now"
             variant="filled"
           />
           <IconBox>
@@ -55,6 +71,29 @@ const Header = () => {
           <CartIcon />
         </CartBox>
       </HeaderRightContainer>
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+      >
+        <Typography sx={{ p: 2, width: "100px" }}>
+          <LinkText>
+            <PopLinks href="/nft" underline="none">
+              NFT'S
+            </PopLinks>
+          </LinkText>
+          <LinkText>
+            <PopLinks href="/collection" underline="none">
+              Collection
+            </PopLinks>
+          </LinkText>
+        </Typography>
+      </Popover>
     </HeaderWrapper>
   );
 };
