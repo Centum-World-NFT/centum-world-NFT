@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 
 export const Wrapper = styled("div")({
     height: '100vh',
-    padding: "150px 0px 0px 0px"
+    padding: "150px 0px 0px 0px",
 })
 
 export const HeadingDiv = styled(Box)({
@@ -12,7 +12,8 @@ export const HeadingDiv = styled(Box)({
 
 export const HeadingTitle = styled(Typography)({
     fontamily: "'Poppins', sans-serif",
-    fontWeight:'700'
+    fontWeight:'700',
+    color: "#000",
 })
 
 export const HighlightedText = styled(Typography)({

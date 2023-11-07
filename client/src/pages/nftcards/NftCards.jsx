@@ -1,7 +1,4 @@
 import Header from "../../components/common/header/Header";
-import { useState } from "react";
-
-
 import {
   HeadingTitle,
   HighlightedText,
@@ -17,13 +14,6 @@ import NavTabs from "../../components/common/tabs/NavTabs";
 
 
 const NftCards = () => {
-
-  const [value, setValue] = useState('1');
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <>
       <Header />

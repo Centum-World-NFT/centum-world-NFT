@@ -1,6 +1,8 @@
 import React from "react";
 import {
+  CardName,
   Filter,
+  FilterText,
   ImageDiv,
   ImageSelectorDiv,
   SelectorDiv,
@@ -45,9 +47,9 @@ const NftFilter = () => {
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              <FilterText sx={{flexShrink: 0 }}>
                 Marketplace
-              </Typography>
+              </FilterText>
             </AccordionSummary>
             <AccordionDetails>
               <Stack direction="row" spacing={1}>
@@ -70,9 +72,9 @@ const NftFilter = () => {
               aria-controls="panel2bh-content"
               id="panel2bh-header"
             >
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              <FilterText sx={{ width: "33%", flexShrink: 0 }}>
                 Status
-              </Typography>
+              </FilterText>
             </AccordionSummary>
             <AccordionDetails>
              
@@ -87,9 +89,9 @@ const NftFilter = () => {
               aria-controls="panel3bh-content"
               id="panel3bh-header"
             >
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              <FilterText sx={{ width: "33%", flexShrink: 0 }}>
                 Price
-              </Typography>
+              </FilterText>
             </AccordionSummary>
             <AccordionDetails>
               
@@ -104,9 +106,9 @@ const NftFilter = () => {
               aria-controls="panel4bh-content"
               id="panel4bh-header"
             >
-              <Typography sx={{ width: "33%", flexShrink: 0 }}>
+              <FilterText sx={{ width: "33%", flexShrink: 0 }}>
                 NFT Types
-              </Typography>
+              </FilterText>
             </AccordionSummary>
             <AccordionDetails>
               
@@ -122,9 +124,9 @@ const NftFilter = () => {
               title="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <CardName gutterBottom variant="h5" component="div">
                 Bean #1234
-              </Typography>
+              </CardName>
               <Typography variant="body2" color="text.secondary">
                 Official end in 2 month.
               </Typography>
@@ -137,9 +139,9 @@ const NftFilter = () => {
               title="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <CardName gutterBottom variant="h5" component="div">
                 Bean #1234
-              </Typography>
+              </CardName>
               <Typography variant="body2" color="text.secondary">
                 Official end in 2 month.
               </Typography>
@@ -153,9 +155,9 @@ const NftFilter = () => {
               title="green iguana"
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <CardName gutterBottom variant="h5" component="div">
                 Bean #1234
-              </Typography>
+              </CardName>
               <Typography variant="body2" color="text.secondary">
                 Official end in 2 month.
               </Typography>

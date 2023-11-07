@@ -46,3 +46,11 @@ export const ImageDiv = styled("div")({
     display:"flex"
 })
 
+export const FilterText = styled(Typography)({
+    color: "#000",
+})
+
+export const CardName = styled("div")({
+    color: "#000"
+})
+
