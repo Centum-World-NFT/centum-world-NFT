@@ -8,7 +8,6 @@ import {
   IconBox,
   LinkBox,
   LinkText,
-  LoginButton,
   LogoBox,
   NavLink,
   PopLinks,
@@ -17,11 +16,11 @@ import {
 } from "./HeaderStyle";
 import CentumWorldLogo from "@/assets/png/centum-logo.png";
 import { DownArrow } from "@/utils/icons";
-import { KeyIcon } from "@/utils/icons";
 import { NavSearchIcon } from "@/utils/icons";
 import { CartIcon } from "@/utils/icons";
 import { Link, Popover, Typography } from "@mui/material";
 import { useState } from "react";
+import SignInButton from "../../core/auth/login/SignIn";
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -56,10 +55,7 @@ const Header = () => {
         </LinkBox>
       </HeaderLeftContainer>
       <HeaderRightContainer>
-        <LoginButton variant="contained">
-          <KeyIcon />
-          Sign In
-        </LoginButton>
+      <SignInButton/>
         <SearchBox>
           <SearchInput
             id="outlined-start-adornment"
