@@ -1,4 +1,4 @@
-import { Button, TextField, Typography } from "@mui/material";
+import {  TextField, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const HeaderWrapper = styled("div")({
@@ -48,13 +48,6 @@ export const HeaderRightContainer = styled("div")({
   alignItems: "center",
 });
 
-export const LoginButton = styled(Button)({
-  borderRadius: "50px",
-  textTransform: "inherit",
-  padding: ".7rem 1.5rem",
-  display: "flex",
-  gap: ".2rem",
-});
 
 export const SearchInput = styled(TextField)({
   padding: "0px 10px 0px 0px",

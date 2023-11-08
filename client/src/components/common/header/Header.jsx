@@ -1,4 +1,3 @@
-import { Box, Button, InputAdornment, TextField } from "@mui/material";
 import {
   CartBox,
   CompanyName,
@@ -7,7 +6,6 @@ import {
   HeaderWrapper,
   IconBox,
   LinkBox,
-  LoginButton,
   LogoBox,
   NavLink,
   SearchBox,
@@ -15,9 +13,9 @@ import {
 } from "./HeaderStyle";
 import CentumWorldLogo from "@/assets/png/centum-logo.png";
 import { DownArrow } from "@/utils/icons";
-import { KeyIcon } from "@/utils/icons";
 import { NavSearchIcon } from "@/utils/icons";
 import { CartIcon } from "@/utils/icons";
+import SignInButton from "../../core/auth/login/SignIn";
 
 const Header = () => {
   return (
@@ -37,10 +35,7 @@ const Header = () => {
         </LinkBox>
       </HeaderLeftContainer>
       <HeaderRightContainer>
-        <LoginButton variant="contained">
-          <KeyIcon />
-          Sign In
-        </LoginButton>
+      <SignInButton/>
         <SearchBox>
           <SearchInput
             id="outlined-start-adornment"
