@@ -49,7 +49,7 @@ export const LinkBox = styled("div")({
   display: "flex",
 });
 
-export const HeaderRightContainer = styled("div")(({theme}) => ({
+export const HeaderRightContainer = styled("div") ({
   display: "flex",
   alignItems: "center",
 });

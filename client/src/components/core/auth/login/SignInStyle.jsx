@@ -37,6 +37,11 @@ export const LoginButton = styled(Button)({
     font:"900 16px inherit",
     color:"#121212",
     boxShadow: "0px -1px 2.5px grey",
+    display:"flex",
+    justifyContent:"space-between",
+    ".Typography":{
+      cursor:"pointer"
+    }
   });
 
   export const LoginDialog = styled(Dialog)({
