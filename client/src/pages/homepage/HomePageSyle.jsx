@@ -11,7 +11,7 @@ export const imageStyle = {
   animation: "slide-br 1s ease-out 1s infinite alternate both",
   position: "absolute",
   right: "-10%",
-  top: "-20%",
+  top: "-40%",
 };
 
 export const imageStyle2 = {
@@ -28,12 +28,12 @@ export const frameImage = {
 
 export const HeroText = styled(Typography)(({ theme }) => ({
   position: "absolute",
-  bottom: "0%",
+  bottom: "5%",
   fontWeight: "600",
-  fontSize: "8.75rem",
+  fontSize: "7.75rem",
   fontFamily: "'Poppins', sans-serif",
   color: "#fff",
-  width: "60%",
+  padding: "20px",
   [theme.breakpoints.down("md")]: {
     width: "100vw",
     fontSize: "3.5rem",
