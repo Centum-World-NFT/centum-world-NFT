@@ -29,7 +29,7 @@ const HomePage = () => {
       />
       <img src={FrameImage1} alt="frame__Image" style={frameImage} className="frameImage" />
       <HeroText variant="p">
-        WELCOME TO{" "}
+        WELCOME TO{" "} <br />
         <HightLightedText variant="span"> CENTUMO NFT’S </HightLightedText>
       </HeroText>
     </Wrapper>
