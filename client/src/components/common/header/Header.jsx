@@ -86,12 +86,12 @@ const Header = () => {
       >
         <Typography sx={{ p: 2, width: "100px" }}>
           <LinkText>
-            <PopLinks href="/nft" underline="none">
+            <PopLinks href="/discover/nft" underline="none">
               NFT'S
             </PopLinks>
           </LinkText>
           <LinkText>
-            <PopLinks href="/collection" underline="none">
+            <PopLinks href="/discover/collections" underline="none">
               Collection
             </PopLinks>
           </LinkText>

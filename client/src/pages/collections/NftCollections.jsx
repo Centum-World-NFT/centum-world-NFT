@@ -1,18 +1,18 @@
 import React from 'react'
-import { HeadingDiv, HeadingRoute, HeadingTitle, Wrapper } from './NftCollectionsStyle'
+import { HeadingDiv, HeadingRoute, HeadingTitle, TableHeadigRightBox, TableHeadingLeftBox, TableMainDiv, Wrapper } from './NftCollectionsStyle'
 import TableHeading from '../../components/common/tableheading/TableHeading'
 
 const NftCollections = () => {
   return (
-    <div>
-      <Wrapper>
-        <HeadingDiv >
-          <HeadingTitle variant="h5" >Leaderboard</HeadingTitle>
-          <HeadingRoute>View collections</HeadingRoute>
-        </HeadingDiv>
-        <TableHeading/>
-      </Wrapper>
-    </div>
+    <>
+        <Wrapper>
+            <HeadingDiv>
+            <HeadingTitle>Leaderboard</HeadingTitle>
+            <HeadingRoute>View Collections</HeadingRoute>
+            </HeadingDiv>
+            <TableHeading/>
+        </Wrapper>
+    </>
   )
 }
 
