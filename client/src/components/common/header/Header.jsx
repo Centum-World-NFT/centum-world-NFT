@@ -4,6 +4,7 @@ import {
   HeaderLeftContainer,
   HeaderRightContainer,
   HeaderWrapper,
+  HomePageLink,
   IconBox,
   LinkBox,
   LinkText,
@@ -19,7 +20,7 @@ import { DownArrow } from "@/utils/icons";
 import { KeyIcon } from "@/utils/icons";
 import { NavSearchIcon } from "@/utils/icons";
 import { CartIcon } from "@/utils/icons";
-import { Popover, Typography } from "@mui/material";
+import { Link, Popover, Typography } from "@mui/material";
 import { useState } from "react";
 
 const Header = () => {
@@ -39,10 +40,12 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderLeftContainer>
+          <HomePageLink href="/" underline="none">
         <LogoBox>
           <img src={CentumWorldLogo} alt="centum_world_logo" />
           <CompanyName>CENTUMO NFT’S</CompanyName>
         </LogoBox>
+          </HomePageLink>
         <LinkBox>
           <NavLink onClick={handleClick}>
             Discover <DownArrow />{" "}

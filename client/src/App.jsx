@@ -7,7 +7,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/collection" element={<NftCards />} />
+        <Route path="/nft" element={<NftCards />} />
       </Routes>
     </>
   );

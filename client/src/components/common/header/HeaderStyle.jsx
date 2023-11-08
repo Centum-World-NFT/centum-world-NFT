@@ -15,6 +15,7 @@ export const HeaderWrapper = styled("div")({
   padding: "20px",
   justifyContent: "space-between",
   zIndex: "1",
+  color: "#fff",
 });
 
 export const LogoBox = styled("div")({
@@ -143,3 +144,7 @@ export const LinkText = styled(Typography)({
   marginTop: ".2rem",
   fontFamily: "'Poppins', sans-serif",
 });
+
+export const HomePageLink = styled(Link)({
+  color: "#fff",
+})
