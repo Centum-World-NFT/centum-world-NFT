@@ -61,6 +61,7 @@ export const LoginDialog = styled(Dialog)({
     boxShadow: "0px -1px 5px grey",
     padding: "24px",
     border: "none",
+    overflowY:"hidden",
     "&:hover": {
       border: "none",
     },
