@@ -5,18 +5,23 @@ import {
   FilterText,
   ImageDiv,
   ImageSelectorDiv,
+  MinDiv,
   SelectorDiv,
+  TokenFilter,
 } from "./NftfilterStyle";
 import { FilterIcon } from "@/utils/icons";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Box,
+  Button,
   Card,
   CardContent,
   CardMedia,
   Chip,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import { DownArrow } from "@/utils/icons";
@@ -47,18 +52,24 @@ const NftFilter = () => {
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
-              <FilterText sx={{flexShrink: 0 }}>
-                Marketplace
-              </FilterText>
+              <FilterText sx={{ flexShrink: 0 }}>Marketplace</FilterText>
             </AccordionSummary>
             <AccordionDetails>
               <Stack direction="row" spacing={1}>
                 <Chip
-                  label="Ocean"
+                  label="OpenSea"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
                 />
                 <Chip
                   label="NFT.com"
-                  variant="outlined"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
+                />
+                <Chip
+                  label="LooksRare"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
                 />
               </Stack>
             </AccordionDetails>
@@ -77,7 +88,18 @@ const NftFilter = () => {
               </FilterText>
             </AccordionSummary>
             <AccordionDetails>
-             
+              <Stack direction="row" spacing={1}>
+                <Chip
+                  label="Buy Now"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
+                />
+                <Chip
+                  label="New"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
+                />
+              </Stack>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -94,7 +116,71 @@ const NftFilter = () => {
               </FilterText>
             </AccordionSummary>
             <AccordionDetails>
-              
+              <MinDiv>
+                <Stack
+                  component="form"
+                  sx={{
+                    width: "14ch",
+                  }}
+                  spacing={2}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    hiddenLabel
+                    id="filled-hidden-label-small"
+                    placeholder="Min"
+                    variant="filled"
+                    size="small"
+                  />
+                </Stack>
+                <Typography
+                  variant="body1"
+                  style={{ color: "black", margin: "2px" }}
+                >
+                  To
+                </Typography>
+                <Stack
+                  component="form"
+                  sx={{
+                    width: "14ch",
+                  }}
+                  spacing={2}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    hiddenLabel
+                    id="filled-hidden-label-small"
+                    placeholder="Max"
+                    variant="filled"
+                    size="small"
+                  />
+                </Stack>
+              </MinDiv>
+              <TokenFilter>
+                <Accordion 
+                    style={{background:"#F0F0F0"}}
+                >
+                  <AccordionSummary
+                    expandIcon={<DownArrow />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                  >
+                    <Typography style={{color:"black"}}>Centomo Token</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography style={{background:"#4393f4", cursor:"pointer", marginBottom:"2px", borderRadius:"2px", textAlign:"center"}}>
+                      Centomo Token
+                    </Typography>
+                    <Typography style={{background:"#4393f4", cursor:"pointer",  marginBottom:"2px", borderRadius:"2px", textAlign:"center"}}>
+                      Centomo Token
+                    </Typography>
+
+                    <Button variant="contained" style={{width:"235px"}}>Apply</Button>
+                  </AccordionDetails>
+                </Accordion>
+              </TokenFilter>
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -111,7 +197,23 @@ const NftFilter = () => {
               </FilterText>
             </AccordionSummary>
             <AccordionDetails>
-              
+            <Stack direction="column" spacing={1}>
+                <Chip
+                  label="ERC721"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
+                />
+                <Chip
+                  label="ERC1155"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
+                />
+                <Chip
+                  label="CRIPTO_PUNKS"
+                  color="primary"
+                  style={{ cursor: "pointer" }}
+                />
+              </Stack>
             </AccordionDetails>
           </Accordion>
         </SelectorDiv>

@@ -27,9 +27,10 @@ export const DisableButton = styled("div")({
 
 export const ImageSelectorDiv = styled("div")({
     display:"flex",
-    marginTop:"10px"
-
+    marginTop:"10px",
 })
+
+
 
 export const SelectorDiv = styled("div")({
     width:"300px",
@@ -54,3 +55,13 @@ export const CardName = styled("div")({
     color: "#000"
 })
 
+export const MinDiv = styled("div")({
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
+    marginBottom:"5px"
+})
+
+export const TokenFilter = styled("div")({
+    background:"#f7f7f8"
+})
