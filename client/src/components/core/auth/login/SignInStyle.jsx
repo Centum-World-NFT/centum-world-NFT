@@ -41,7 +41,6 @@ export const LoginTitle = styled(DialogTitle)({
 });
 
 export const LoginDialog = styled(Dialog)(({theme})=>({
-  maxWidth: "100%",
   borderRadius: "10px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   "& .MuiDialog-paper": {
