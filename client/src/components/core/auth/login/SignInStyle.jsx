@@ -11,11 +11,8 @@ export const LoginButton = styled(Button)({
   lineHeight: "1.75rem",
   background: "#4393F4",
   color: "black",
-  marginRight: "0.7rem",
+  margin: "0 0.7rem 0 0",
   transition: "font-weight 0.2s, filter 0.2s",
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
 });
 
 export const SignupList = styled(Typography)({
@@ -43,35 +40,91 @@ export const LoginTitle = styled(DialogTitle)({
   },
 });
 
-export const LoginDialog = styled(Dialog)({
-  maxWidth: "100%",
+export const LoginDialog = styled(Dialog)(({theme})=>({
   borderRadius: "10px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   "& .MuiDialog-paper": {
     overflowX: "hidden",
-    width: "550px",
-    maxWidth: "100%",
+    width: "50%",
     borderRadius: "24px",
-    height: "450px",
-    maxheight: "100%",
+    height: "70%",
     overflowY: "auto",
+    margin: "0",
   },
   ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
     color: "grey",
     boxShadow: "0px -1px 5px grey",
     padding: "24px",
     border: "none",
-    overflowY:"hidden",
+    overflowY: "hidden",
     "&:hover": {
       border: "none",
     },
   },
-  ".css-ahj2mt-MuiTypography-root ": {
+  ".css-ahj2mt-MuiTypography-root": {
     display: "flex",
   },
-});
+  [theme.breakpoints.down(1024)]:{
+    "& .MuiDialog-paper": {
+      width: "60%",
+      borderRadius: "0",
+      height: "60%",
+      overflowY: "auto",
+      borderRadius:"20PX",
+    },
+    ".recommendation":{
+      fontSize:"0.7rem",
+    },
+    ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
+      padding: "16px",
+    },
+  },
+
+   [theme.breakpoints.down(768)]:{
+    "& .MuiDialog-paper": {
+      width: "70%",
+      borderRadius: "0",
+      height: "65%",
+      overflowY: "auto",
+      borderRadius:"20PX",
+      marginTop:"4rem",
+      ".recommendation":{
+        fontSize:"0.6rem",
+      },
+      ".css-ypiqx9-MuiDialogContent-root":{
+        padding:"0px"
+      }
+    },    
+    ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
+      padding: "13px",
+    },
+  },
+  [theme.breakpoints.down(480)]:{
+    "& .MuiDialog-paper": {
+      width: "90%",
+      borderRadius: "0",
+      height: "70%",
+      overflowY: "auto",
+      borderRadius:"20PX",
+      marginTop:"4rem",
+      ".recommendation":{
+        fontSize:"0.5rem",
+        marginTop:"0.4rem"
+      },
+      ".css-ypiqx9-MuiDialogContent-root":{
+        padding:"0px"
+      }
+    },    
+    ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
+      padding: "10px",
+    },
+  },
+}));
 
 export const Wraper = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
+  ".recommendation":{
+    fontSize:"0.8rem"
+  }
 });

@@ -56,7 +56,7 @@ function SignInButton() {
               />{" "}
               {item.name}
             </Typography>
-            <Typography>{item.recommendation}</Typography>
+            <Typography className="recommendation">{item.recommendation}</Typography>
           </Wraper>
         </SignupList>
       ));
@@ -75,7 +75,7 @@ function SignInButton() {
               />{" "}
               {item.name}
             </Typography>
-            <Typography>{item.recommendation}</Typography>
+            <Typography className="recommendation">{item.recommendation}</Typography>
           </Wraper>
         </SignupList>
       ));
