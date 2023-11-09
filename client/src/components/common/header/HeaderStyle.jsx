@@ -49,13 +49,10 @@ export const LinkBox = styled("div")({
   display: "flex",
 });
 
-export const HeaderRightContainer = styled("div")(({theme}) => ({
+export const HeaderRightContainer = styled("div") ({
   display: "flex",
   alignItems: "center",
-  [theme.breakpoints.down('md')]:{
-    display: "none"
-  }
-}))
+});
 
 export const LoginButton = styled(Button)({
   borderRadius: "50px",
