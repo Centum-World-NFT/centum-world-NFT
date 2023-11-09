@@ -41,11 +41,6 @@ const allItems = [
     recommendation: "BNB CAIN",
   },
   {
-    name: "kaikash",
-    icon: KaikashIcon,
-    recommendation: "KLAYTN",
-  },
-  {
     name: "Core",
     icon: CoreIcon,
     recommendation: "AVALANCHE",
