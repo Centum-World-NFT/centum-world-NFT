@@ -24,7 +24,6 @@ export const HeadingRightBox = styled(Box)(()=> ({
 export const HeadingTitle = styled(Typography)({
     fontamily: "'Poppins', sans-serif",
     fontWeight:'600',
-    // fontSize:'18px',
     color:'darkgray',
 
 })

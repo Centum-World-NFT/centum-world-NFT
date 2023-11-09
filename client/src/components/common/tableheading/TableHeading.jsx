@@ -7,14 +7,14 @@ const TableHeading = () => {
             <Wrapper>
                 <HeadingDiv>
                     <HeadingLeftBox>
-                        <HeadingTitle>COLLECTION</HeadingTitle>
+                        <HeadingTitle style={{ marginLeft: '30px' }} >COLLECTION</HeadingTitle>
                     </HeadingLeftBox>
                     <HeadingRightBox>
                         <HeadingTitle>VOLUME</HeadingTitle>
                         <HeadingTitle>% CHANGE</HeadingTitle>
                         <HeadingTitle>FLOOR PRICE</HeadingTitle>
-                        <HeadingTitle>ITEMS</HeadingTitle>
                         <HeadingTitle>SALES</HeadingTitle>
+
                     </HeadingRightBox>
                 </HeadingDiv>
             </Wrapper>

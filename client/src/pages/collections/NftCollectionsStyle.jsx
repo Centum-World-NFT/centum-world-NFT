@@ -31,7 +31,6 @@ export const TableHeadigRightBox = styled(Box)({
 export const HeadingTitle = styled(Typography)({
     fontamily: "'Poppins', sans-serif",
     fontWeight: '700',
-    // color: "#000",
     fontSize: '22px'
 })
 export const HeadingRoute = styled(Typography)({
