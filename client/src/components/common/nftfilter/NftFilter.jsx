@@ -1,6 +1,8 @@
 import React from "react";
 import {
+  Badge,
   CardName,
+  CardWithBadge,
   Filter,
   FilterText,
   ImageDiv,
@@ -159,25 +161,43 @@ const NftFilter = () => {
                 </Stack>
               </MinDiv>
               <TokenFilter>
-                <Accordion 
-                    style={{background:"#F0F0F0"}}
-                >
+                <Accordion style={{ background: "#F0F0F0" }}>
                   <AccordionSummary
                     expandIcon={<DownArrow />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                   >
-                    <Typography style={{color:"black"}}>Centomo Token</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography style={{background:"#4393f4", cursor:"pointer", marginBottom:"2px", borderRadius:"2px", textAlign:"center"}}>
+                    <Typography style={{ color: "black" }}>
                       Centomo Token
                     </Typography>
-                    <Typography style={{background:"#4393f4", cursor:"pointer",  marginBottom:"2px", borderRadius:"2px", textAlign:"center"}}>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography
+                      style={{
+                        background: "#4393f4",
+                        cursor: "pointer",
+                        marginBottom: "2px",
+                        borderRadius: "2px",
+                        textAlign: "center",
+                      }}
+                    >
+                      Centomo Token
+                    </Typography>
+                    <Typography
+                      style={{
+                        background: "#4393f4",
+                        cursor: "pointer",
+                        marginBottom: "2px",
+                        borderRadius: "2px",
+                        textAlign: "center",
+                      }}
+                    >
                       Centomo Token
                     </Typography>
 
-                    <Button variant="contained" style={{width:"235px"}}>Apply</Button>
+                    <Button variant="contained" style={{ width: "235px" }}>
+                      Apply
+                    </Button>
                   </AccordionDetails>
                 </Accordion>
               </TokenFilter>
@@ -197,7 +217,7 @@ const NftFilter = () => {
               </FilterText>
             </AccordionSummary>
             <AccordionDetails>
-            <Stack direction="column" spacing={1}>
+              <Stack direction="column" spacing={1}>
                 <Chip
                   label="ERC721"
                   color="primary"
@@ -219,7 +239,7 @@ const NftFilter = () => {
         </SelectorDiv>
 
         <ImageDiv>
-          <Card sx={{ width: 345, marginRight: 2 }}>
+          {/* <Card sx={{ width: 345, marginRight: 2 }}>
             <CardMedia
               sx={{ height: 300 }}
               image={image}
@@ -233,7 +253,25 @@ const NftFilter = () => {
                 Official end in 2 month.
               </Typography>
             </CardContent>
-          </Card>
+          </Card> */}
+
+          <CardWithBadge sx={{ width: 345, marginRight: 2 }}>
+            <Badge>New</Badge>
+            <CardMedia
+              sx={{ height: 300 }}
+              image={image}
+              title="green iguana"
+            />
+            <CardContent>
+              <CardName gutterBottom variant="h5" component="div">
+                Bean #1234
+              </CardName>
+              <Typography variant="body2" color="text.secondary">
+                Official end in 2 months.
+              </Typography>
+            </CardContent>
+          </CardWithBadge>
+
           <Card sx={{ width: 345, marginRight: 2 }}>
             <CardMedia
               sx={{ height: 300 }}
