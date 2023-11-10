@@ -15,7 +15,6 @@ import Footer from "../../components/common/footer/Footer";
 const HomePage = () => {
   return (
     <>
-      <>
       <Wrapper>
           <Header />
           <img
@@ -42,5 +41,4 @@ const HomePage = () => {
     </>
   );
 };
-
 export default HomePage;
