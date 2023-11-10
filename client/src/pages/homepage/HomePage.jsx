@@ -9,19 +9,21 @@ import {
 } from "./HomePageSyle";
 import BackgroundImage from "@/assets/png/bg-cards.png";
 import FrameImage1 from "@/assets/png/Frame-1.png";
+import FaqSection from "@/components/faqSection/FaqSection";
 import Footer from "../../components/common/footer/Footer";
 
 const HomePage = () => {
   return (
     <>
+      <>
       <Wrapper>
-        <Header />
-        <img
-          src={BackgroundImage}
-          alt="background-Card-image"
-          style={imageStyle}
-          className="responsive-image2"
-        />
+          <Header />
+          <img
+            src={BackgroundImage}
+            alt="background-Card-image"
+            style={imageStyle}
+            className="responsive-image2"
+          />
 
         <img
           src={BackgroundImage}
@@ -29,18 +31,13 @@ const HomePage = () => {
           style={imageStyle2}
           className="responsive-image"
         />
-        <img
-          src={FrameImage1}
-          alt="frame__Image"
-          style={frameImage}
-          className="frameImage"
-        />
+        <img src={FrameImage1} alt="frame__Image" style={frameImage} className="frameImage" />
         <HeroText variant="p">
-          WELCOME TO <br />
+          WELCOME TO{" "} <br />
           <HightLightedText variant="span"> CENTUMO NFT’S </HightLightedText>
         </HeroText>
       </Wrapper>
-
+      <FaqSection />
       <Footer />
     </>
   );
