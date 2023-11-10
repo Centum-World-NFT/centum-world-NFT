@@ -1,7 +1,7 @@
 import { Box, Button, Dialog, DialogTitle, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
-export const LoginButton = styled(Button)({
+export const LoginButton = styled(Button)(({ theme }) => ({
   borderRadius: "50px",
   textTransform: "inherit",
   padding: ".6rem 1.2rem",
@@ -13,7 +13,18 @@ export const LoginButton = styled(Button)({
   color: "black",
   margin: "0 0.7rem 0 0",
   transition: "font-weight 0.2s, filter 0.2s",
-});
+  [theme.breakpoints.down("sm")]:{
+    display: "flex",
+    height: "40px",
+    padding: "20px"
+  }
+}));
+
+export const ButtonText = styled(Typography)(({theme}) => ({
+  [theme.breakpoints.down("lg")]:{
+    width: "max-content"
+  }
+}))
 
 export const SignupList = styled(Typography)({
   font: "600 16px inherit",
@@ -40,7 +51,7 @@ export const LoginTitle = styled(DialogTitle)({
   },
 });
 
-export const LoginDialog = styled(Dialog)(({theme})=>({
+export const LoginDialog = styled(Dialog)(({ theme }) => ({
   borderRadius: "10px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
   "& .MuiDialog-paper": {
@@ -64,57 +75,57 @@ export const LoginDialog = styled(Dialog)(({theme})=>({
   ".css-ahj2mt-MuiTypography-root": {
     display: "flex",
   },
-  [theme.breakpoints.down(1024)]:{
+  [theme.breakpoints.down(1024)]: {
     "& .MuiDialog-paper": {
       width: "60%",
       borderRadius: "0",
       height: "60%",
       overflowY: "auto",
-      borderRadius:"20PX",
+      borderRadius: "20PX",
     },
-    ".recommendation":{
-      fontSize:"0.7rem",
+    ".recommendation": {
+      fontSize: "0.7rem",
     },
     ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
       padding: "16px",
     },
   },
 
-   [theme.breakpoints.down(768)]:{
+  [theme.breakpoints.down(768)]: {
     "& .MuiDialog-paper": {
       width: "70%",
       borderRadius: "0",
       height: "65%",
       overflowY: "auto",
-      borderRadius:"20PX",
-      marginTop:"4rem",
-      ".recommendation":{
-        fontSize:"0.6rem",
+      borderRadius: "20PX",
+      marginTop: "4rem",
+      ".recommendation": {
+        fontSize: "0.6rem",
       },
-      ".css-ypiqx9-MuiDialogContent-root":{
-        padding:"0px"
-      }
-    },    
+      ".css-ypiqx9-MuiDialogContent-root": {
+        padding: "0px",
+      },
+    },
     ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
       padding: "13px",
     },
   },
-  [theme.breakpoints.down(480)]:{
+  [theme.breakpoints.down(480)]: {
     "& .MuiDialog-paper": {
       width: "90%",
       borderRadius: "0",
       height: "70%",
       overflowY: "auto",
-      borderRadius:"20PX",
-      marginTop:"4rem",
-      ".recommendation":{
-        fontSize:"0.5rem",
-        marginTop:"0.4rem"
+      borderRadius: "20PX",
+      marginTop: "4rem",
+      ".recommendation": {
+        fontSize: "0.5rem",
+        marginTop: "0.4rem",
       },
-      ".css-ypiqx9-MuiDialogContent-root":{
-        padding:"0px"
-      }
-    },    
+      ".css-ypiqx9-MuiDialogContent-root": {
+        padding: "0px",
+      },
+    },
     ".css-1rwt2y5-MuiButtonBase-root-MuiButton-root": {
       padding: "10px",
     },
@@ -124,7 +135,7 @@ export const LoginDialog = styled(Dialog)(({theme})=>({
 export const Wraper = styled(Box)({
   display: "flex",
   justifyContent: "space-between",
-  ".recommendation":{
-    fontSize:"0.8rem"
-  }
+  ".recommendation": {
+    fontSize: "0.8rem",
+  },
 });

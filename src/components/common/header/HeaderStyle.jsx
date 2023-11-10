@@ -49,10 +49,27 @@ export const LinkBox = styled("div")({
   display: "flex",
 });
 
-export const HeaderRightContainer = styled("div") ({
+export const HeaderRightContainer = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
-});
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+}));
+
+export const MobileScreenLearnText = styled(Typography)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+}));
+
+export const MobileScreenButton = styled("div")(({theme}) => ({
+  [theme.breakpoints.up("sm")]:{
+    display: "none"
+  }
+}))
 
 export const LoginButton = styled(Button)({
   borderRadius: "50px",
@@ -144,4 +161,4 @@ export const LinkText = styled(Typography)({
 
 export const HomePageLink = styled(Link)({
   color: "#fff",
-})
+});

@@ -4,7 +4,15 @@
   overflow-x: hidden;
   padding: 0px;
   margin: 0px;
-  /* color: #fff; */
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* Hide the scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes slide-br {

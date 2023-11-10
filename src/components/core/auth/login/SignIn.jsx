@@ -2,7 +2,7 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
-import { LoginButton, Wraper } from "./SignInStyle";
+import { ButtonText, LoginButton, Wraper } from "./SignInStyle";
 import { LoginIcon } from "../../../../utils/icons";
 import { LoginTitle } from "./SignInStyle";
 import { LoginDialog } from "./SignInStyle";
@@ -56,7 +56,9 @@ function SignInButton() {
               />{" "}
               {item.name}
             </Typography>
-            <Typography className="recommendation">{item.recommendation}</Typography>
+            <Typography className="recommendation">
+              {item.recommendation}
+            </Typography>
           </Wraper>
         </SignupList>
       ));
@@ -75,7 +77,9 @@ function SignInButton() {
               />{" "}
               {item.name}
             </Typography>
-            <Typography className="recommendation">{item.recommendation}</Typography>
+            <Typography className="recommendation">
+              {item.recommendation}
+            </Typography>
           </Wraper>
         </SignupList>
       ));
@@ -85,17 +89,24 @@ function SignInButton() {
   return (
     <React.Fragment>
       <LoginButton variant="outlined" onClick={handleClickOpen}>
-        <LoginIcon /> Sign In
+        <LoginIcon />
+        <ButtonText> Sign In </ButtonText>
       </LoginButton>
       <LoginDialog
         open={open}
         onClose={() => {}}
         aria-labelledby="responsive-dialog-title"
       >
-          <LoginTitle id="responsive-dialog-title">
-            {"Connect your wallet"}
-            <Typography className="Typography" variant="span" onClick={handleClose}>X</Typography>
-          </LoginTitle>
+        <LoginTitle id="responsive-dialog-title">
+          {"Connect your wallet"}
+          <Typography
+            className="Typography"
+            variant="span"
+            onClick={handleClose}
+          >
+            X
+          </Typography>
+        </LoginTitle>
         <DialogContent>
           <DialogContentText>{renderList()}</DialogContentText>
         </DialogContent>
