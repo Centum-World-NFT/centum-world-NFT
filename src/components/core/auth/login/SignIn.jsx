@@ -9,7 +9,6 @@ import { LoginDialog } from "./SignInStyle";
 import { Typography } from "@mui/material";
 import { SignupList } from "./SignInStyle";
 import allItems from "../../../../data/SignUpAllData";
-import Web3 from "web3";
 
 function SignInButton() {
   const [open, setOpen] = React.useState(false);
@@ -27,18 +26,18 @@ function SignInButton() {
   };
 
   const handleMetaMaskClick = async () => {
-    if (window.ethereum) {
-      try {
-        await window.ethereum.request({ method: "eth_requestAccounts" });
-        const web3 = new Web3(window.ethereum);
-        const accounts = await web3.eth.getAccounts();
-        console.log("Connected to Metamask:", accounts[0]);
-      } catch (error) {
-        console.error("Error connecting to Metamask:", error);
-      }
-    } else {
-      console.error("Metamask is not installed");
-    }
+    // if (window.ethereum) {
+    //   try {
+    //     await window.ethereum.request({ method: "eth_requestAccounts" });
+    //     const web3 = new Web3(window.ethereum);
+    //     const accounts = await web3.eth.getAccounts();
+    //     console.log("Connected to Metamask:", accounts[0]);
+    //   } catch (error) {
+    //     console.error("Error connecting to Metamask:", error);
+    //   }
+    // } else {
+    //   console.error("Metamask is not installed");
+    // }
   };
 
   const renderList = () => {
