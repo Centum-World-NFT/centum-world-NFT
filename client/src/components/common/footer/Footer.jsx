@@ -1,5 +1,5 @@
 import React from "react";
-import { Container,Button } from "@mui/material";
+import { Container, Button } from "@mui/material";
 import {
   Facebook,
   Twitter,
@@ -50,7 +50,7 @@ export default function Footer() {
           <SignNewsletter>
             <InputEmail
               id="standard-basic"
-              label="Standard"
+              label="Email"
               variant="standard"
               type="email"
             />
