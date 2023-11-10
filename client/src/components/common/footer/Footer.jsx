@@ -65,7 +65,7 @@ export default function Footer() {
           voluptate quas.
         </FooterContent>
       </Container>
-      <CopyrightContent>© 2020 Copyright:</CopyrightContent>
+      <CopyrightContent>© 2023 Copyright:</CopyrightContent>
     </FooterContainer>
   );
 }
