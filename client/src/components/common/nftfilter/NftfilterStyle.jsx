@@ -2,12 +2,29 @@ import { styled, keyframes } from "@mui/system";
 import { Card, Typography } from "@mui/material";
 
 const blink = keyframes`
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+0% {
+    transform:translateX(0%);
+    transform-origin:50% 50%;
+}
+15% {
+    transform:translateX(-30px) rotate(6deg);
+}
+30% {
+    transform:translateX(15px) rotate(-6deg);
+}
+45% {
+    transform:translateX(-15px) rotate(3.6deg);
+}
+60% {
+    transform:translateX(9px) rotate(-2.4deg);
+}
+75% {
+    transform:translateX(-6px) rotate(1.2deg);
+}
+100% {
+    transform:translateX(0%);
+    transform-origin:50% 50%;
+}
 `;
 
 export const Filter = styled("div")({

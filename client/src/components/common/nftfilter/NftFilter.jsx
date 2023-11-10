@@ -28,6 +28,8 @@ import {
 } from "@mui/material";
 import { DownArrow } from "@/utils/icons";
 import image from "../../../utils/cardimages/image.jpg";
+import dog from "../../../utils/cardimages/dog.jpg";
+import cat from "../../../utils/cardimages/cat.jpg";
 
 const NftFilter = () => {
   const [expanded, setExpanded] = React.useState(false);
@@ -239,23 +241,15 @@ const NftFilter = () => {
         </SelectorDiv>
 
         <ImageDiv>
-          {/* <Card sx={{ width: 345, marginRight: 2 }}>
-            <CardMedia
-              sx={{ height: 300 }}
-              image={image}
-              title="green iguana"
-            />
-            <CardContent>
-              <CardName gutterBottom variant="h5" component="div">
-                Bean #1234
-              </CardName>
-              <Typography variant="body2" color="text.secondary">
-                Official end in 2 month.
-              </Typography>
-            </CardContent>
-          </Card> */}
-
-          <CardWithBadge sx={{ width: 345, marginRight: 2 }}>
+          <CardWithBadge
+            sx={{
+              width: "100%", // Set width to 100% initially
+              marginRight: 2,
+              "@media (min-width: 600px)": {
+                width: 345, // Set width to 345px on screens wider than 600px
+              },
+            }}
+          >
             <Badge>New</Badge>
             <CardMedia
               sx={{ height: 300 }}
@@ -272,12 +266,16 @@ const NftFilter = () => {
             </CardContent>
           </CardWithBadge>
 
-          <Card sx={{ width: 345, marginRight: 2 }}>
-            <CardMedia
-              sx={{ height: 300 }}
-              image={image}
-              title="green iguana"
-            />
+          <Card
+            sx={{
+              width: "100%", // Set width to 100% initially
+              marginRight: 2,
+              "@media (min-width: 600px)": {
+                width: 345, // Set width to 345px on screens wider than 600px
+              },
+            }}
+          >
+            <CardMedia sx={{ height: 300 }} image={dog} title="green iguana" />
             <CardContent>
               <CardName gutterBottom variant="h5" component="div">
                 Bean #1234
@@ -288,12 +286,18 @@ const NftFilter = () => {
             </CardContent>
           </Card>
 
-          <Card sx={{ width: 345, marginRight: 2 }}>
-            <CardMedia
-              sx={{ height: 300 }}
-              image={image}
-              title="green iguana"
-            />
+          <Card
+            sx={{
+              width: "100%",
+              marginRight: 2,
+              "@media (min-width: 600px)": {
+                width: 345,
+                marginRight:0,
+                gap:2
+              },
+            }}
+          >
+            <CardMedia sx={{ height: 300 }} image={cat} title="green iguana" />
             <CardContent>
               <CardName gutterBottom variant="h5" component="div">
                 Bean #1234
