@@ -2,8 +2,8 @@ import { Box, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const Wrapper = styled("div")({
-    height: '100vh',
-    padding: "0px 0px 0px 0px",
+    // height: '100vh',
+    // padding: "0px 0px 0px 0px",
 })
 
 export const HeadingDiv = styled(Box)({

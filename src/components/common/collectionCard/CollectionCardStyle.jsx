@@ -1,11 +1,32 @@
-import {Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
-export const CardContainer = styled(Box)({
-    // display: 'flex',
-    // flexWrap: 'wrap',
-    // width: '95%',
-    // height: 128,
- 
+export const WrapDiv = styled(Box)({
+    display:'flex',
+    flexDirection: 'column' , 
+    gap:'1.5rem',
+    border:'1px solid red'
+});
 
-})
+
+
+export const MainDiv = styled(Box)(({theme}) => ({
+  display: 'flex',
+  padding:'5px',
+  alignItems:'center',
+
+  '& > :not(style)': {
+    width: '96%',
+    margin: '0 auto',
+    transition: 'transform 0.3s',
+    '&:hover': {
+        transform: 'scale(1.02)',
+    },
+  },
+  [theme.breakpoints.down("md")]:{
+    // height: 180,
+    flexDirection:'column'
+  }
+}));
+
+// ... other styled components
