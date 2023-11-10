@@ -9,6 +9,8 @@ import {
   LinkBox,
   LinkText,
   LogoBox,
+  MobileScreenButton,
+  MobileScreenLearnText,
   NavLink,
   PopLinks,
   SearchBox,
@@ -39,23 +41,25 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderLeftContainer>
-          <HomePageLink href="/" underline="none">
-        <LogoBox>
-          <img src={CentumWorldLogo} alt="centum_world_logo" />
-          <CompanyName>CENTUMO NFT’S</CompanyName>
-        </LogoBox>
-          </HomePageLink>
+        <HomePageLink href="/" underline="none">
+          <LogoBox>
+            <img src={CentumWorldLogo} alt="centum_world_logo" />
+            <CompanyName>CENTUMO NFT’S</CompanyName>
+          </LogoBox>
+        </HomePageLink>
         <LinkBox>
           <NavLink onClick={handleClick}>
             Discover <DownArrow />{" "}
           </NavLink>
           <NavLink>
-            Learn <DownArrow />{" "}
+            <MobileScreenLearnText variant="span">
+              Learn <DownArrow />{" "}
+            </MobileScreenLearnText>{" "}
           </NavLink>
         </LinkBox>
       </HeaderLeftContainer>
       <HeaderRightContainer>
-      <SignInButton/>
+        <SignInButton />
         <SearchBox>
           <SearchInput
             id="outlined-start-adornment"
@@ -70,6 +74,9 @@ const Header = () => {
           <CartIcon />
         </CartBox>
       </HeaderRightContainer>
+      <MobileScreenButton>
+        <SignInButton />
+      </MobileScreenButton>
       <Popover
         id={id}
         open={open}
