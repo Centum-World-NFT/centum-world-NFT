@@ -46,24 +46,34 @@ export const RightBox = styled(Box)(({ theme }) => ({
   justifyContent: "space-around",
   [theme.breakpoints.down("md")]: {
     width: "97%",
+    flexDirection: "column",
   },
-  [theme.breakpoints.down('md')]:{
-    flexDirection:'column'
-  }
+ 
 }));
 
-export const RightUperBox = styled(Box)(({theme}) => ({
-    [theme.breakpoints.down("md")]:{
-        display:'flex',
-        justifyContent:'space-between'
-    }
-}))
-export const RightLowerBox = styled(Box)(({theme}) => ({
-    [theme.breakpoints.down("md")]:{
-        display:'flex',
-        justifyContent:'space-between'
-    }
-}))
+export const RightUperBox = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    display: "flex",
+    justifyContent: "space-between",
+    
+  },
+  [theme.breakpoints.up("md")]: {
+    display:'flex',
+     width:'35%',
+     justifyContent:'space-between'
+  },
+}));
+export const RightLowerBox = styled(Box)(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  [theme.breakpoints.up("md")]: {
+    display:'flex',
+    width:'35%',
+     justifyContent:'space-between'
+  },
+}));
 export const SerialNumber = styled(Typography)(({ theme }) => ({
   fontamily: "'Poppins', sans-serif",
   fontWeight: "500",
@@ -80,10 +90,8 @@ export const ImgDiv = styled(Box)({
   width: "70px",
 });
 export const CollectionName = styled(Typography)(({ theme }) => ({
-  display: "block",
   fontamily: "'Poppins', sans-serif",
   fontWeight: 700,
-  //   margin: "30px 0px 0px 10px",
   [theme.breakpoints.down("md")]: {
     fontSize: "22px",
     fontWeight: 900,
@@ -96,6 +104,7 @@ export const VolumeDiv = styled(Box)({
   alignItems: "center",
   justifyContent: "center",
   gap: "0.5rem",
+
 });
 
 export const VolumeContentDiv = styled(Box)(({ theme }) => ({
@@ -134,6 +143,7 @@ export const EthValue = styled(Typography)({
   fontamily: "'Poppins', sans-serif",
   fontWeight: "bold",
 });
+
 export const DolValue = styled(Typography)({
   fontamily: "'Poppins', sans-serif",
   fontWeight: "400",
@@ -179,14 +189,18 @@ export const PerChangeValue = styled(Typography)({
 });
 
 export const SalesDiv = styled("div")(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-//   justifyContent:'center',
-    [theme.breakpoints.up(876)]: {
-          justifyContent:  "center",
-          // alignItems:'center'
-        },
+  display:'flex',
+  flexDirection:'row',
+  alignItems:'center',
+  [theme.breakpoints.down("md")]:{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+ 
+  [theme.breakpoints.not("sm")]: {
+    justifyContent: "center",
+  },
 }));
 
 export const SalesLabelDiv = styled(Box)(({ theme }) => ({
@@ -200,8 +214,7 @@ export const SalesLabelDiv = styled(Box)(({ theme }) => ({
   },
 }));
 export const SalesValueDiv = styled(Box)({
-  // display:'flex',
-  // alignItems:'center'
+
 });
 export const SalesValue = styled(Typography)({
   fontamily: "'Poppins', sans-serif",
