@@ -1,13 +1,20 @@
 import React from "react";
 import {
   Badge,
+  BidButton,
   CardName,
+  CardTitle,
   CardWithBadge,
+  CreatorButton,
+  CreatorDetails,
+  CreatorName,
   Filter,
   FilterText,
+  ImageCardContainer,
   ImageDiv,
   ImageSelectorDiv,
   MinDiv,
+  PriceDiv,
   SelectorDiv,
   TokenFilter,
 } from "./NftfilterStyle";
@@ -30,6 +37,7 @@ import { DownArrow } from "@/utils/icons";
 import image from "../../../utils/cardimages/image.jpg";
 import dog from "../../../utils/cardimages/dog.jpg";
 import cat from "../../../utils/cardimages/cat.jpg";
+import { RightArrow } from "../../../utils/icons";
 
 const NftFilter = () => {
   const [expanded, setExpanded] = React.useState(false);
@@ -241,12 +249,12 @@ const NftFilter = () => {
         </SelectorDiv>
 
         <ImageDiv>
-          <CardWithBadge
+          {/* <CardWithBadge
             sx={{
-              width: "100%", // Set width to 100% initially
+              width: "100%", 
               marginRight: 2,
               "@media (min-width: 600px)": {
-                width: 345, // Set width to 345px on screens wider than 600px
+                width: 345, 
               },
             }}
           >
@@ -264,49 +272,145 @@ const NftFilter = () => {
                 Official end in 2 months.
               </Typography>
             </CardContent>
-          </CardWithBadge>
+          </CardWithBadge> */}
 
-          <Card
-            sx={{
-              width: "100%", // Set width to 100% initially
-              marginRight: 2,
-              "@media (min-width: 600px)": {
-                width: 345, // Set width to 345px on screens wider than 600px
-              },
-            }}
-          >
-            <CardMedia sx={{ height: 300 }} image={dog} title="green iguana" />
-            <CardContent>
-              <CardName gutterBottom variant="h5" component="div">
-                Bean #1234
-              </CardName>
-              <Typography variant="body2" color="text.secondary">
-                Official end in 2 month.
+          <ImageCardContainer>
+            <Badge>New</Badge>
+            <img
+              src={image}
+              style={{
+                width: "150px",
+                height: "160px",
+                borderRadius: "8px",
+                marginBottom: "10px",
+              }}
+            />
+            <CardTitle>WOLF GAMING ART</CardTitle>
+            <CreatorDetails>
+              <CreatorName>
+                <img
+                  src={dog}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    marginRight: "2px",
+                  }}
+                />
+                <Typography style={{ color: "wheat", fontSize: "12px" }}>
+                  Alex Max
+                </Typography>
+              </CreatorName>
+              <Typography
+                style={{ color: "wheat", fontSize: "12px", marginLeft: "2px" }}
+              >
+                {" "}
+                | CREATOR
               </Typography>
-            </CardContent>
-          </Card>
+            </CreatorDetails>
+            <CreatorButton>
+              <PriceDiv>
+                <Typography style={{ color: "white" }}>1.00</Typography>
+                <Typography style={{ color: "Yellow" }}>CTM</Typography>
+              </PriceDiv>
+              <BidButton>
+                <Typography>Bid</Typography>
+                <RightArrow />
+              </BidButton>
+            </CreatorButton>
+          </ImageCardContainer>
 
-          <Card
-            sx={{
-              width: "100%",
-              marginRight: 2,
-              "@media (min-width: 600px)": {
-                width: 345,
-                marginRight:0,
-                gap:2
-              },
-            }}
-          >
-            <CardMedia sx={{ height: 300 }} image={cat} title="green iguana" />
-            <CardContent>
-              <CardName gutterBottom variant="h5" component="div">
-                Bean #1234
-              </CardName>
-              <Typography variant="body2" color="text.secondary">
-                Official end in 2 month.
+          <ImageCardContainer>
+            <Badge>New</Badge>
+            <img
+              src={cat}
+              style={{
+                width: "150px",
+                height: "160px",
+                borderRadius: "8px",
+                marginBottom: "10px",
+              }}
+            />
+            <CardTitle>WOLF GAMING ART</CardTitle>
+            <CreatorDetails>
+              <CreatorName>
+                <img
+                  src={dog}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    marginRight: "2px",
+                  }}
+                />
+                <Typography style={{ color: "wheat", fontSize: "12px" }}>
+                  Alex Max
+                </Typography>
+              </CreatorName>
+              <Typography
+                style={{ color: "wheat", fontSize: "12px", marginLeft: "2px" }}
+              >
+                {" "}
+                | CREATOR
               </Typography>
-            </CardContent>
-          </Card>
+            </CreatorDetails>
+            <CreatorButton>
+              <PriceDiv>
+                <Typography style={{ color: "white" }}>1.00</Typography>
+                <Typography style={{ color: "Yellow" }}>CTM</Typography>
+              </PriceDiv>
+              <BidButton>
+                <Typography>Bid</Typography>
+                <RightArrow />
+              </BidButton>
+            </CreatorButton>
+          </ImageCardContainer>
+
+          <ImageCardContainer>
+            <Badge>New</Badge>
+            <img
+              src={dog}
+              style={{
+                width: "150px",
+                height: "160px",
+                borderRadius: "8px",
+                marginBottom: "10px",
+              }}
+            />
+            <CardTitle>WOLF GAMING ART</CardTitle>
+            <CreatorDetails>
+              <CreatorName>
+                <img
+                  src={dog}
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "50%",
+                    marginRight: "2px",
+                  }}
+                />
+                <Typography style={{ color: "wheat", fontSize: "12px" }}>
+                  Alex Max
+                </Typography>
+              </CreatorName>
+              <Typography
+                style={{ color: "wheat", fontSize: "12px", marginLeft: "2px" }}
+              >
+                {" "}
+                | CREATOR
+              </Typography>
+            </CreatorDetails>
+            <CreatorButton>
+              <PriceDiv>
+                <Typography style={{ color: "white" }}>1.00</Typography>
+                <Typography style={{ color: "Yellow" }}>CTM</Typography>
+              </PriceDiv>
+              <BidButton>
+                <Typography>Bid</Typography>
+                <RightArrow />
+              </BidButton>
+            </CreatorButton>
+          </ImageCardContainer>
         </ImageDiv>
       </ImageSelectorDiv>
     </>

@@ -122,4 +122,70 @@ export const Badge = styled("div")({
   animation: `${blink} 1s infinite`,
 });
 
+export const ImageCardContainer = styled(Card)({
+  display:"flex",
+  flexDirection: 'column',
+  alignItems:"center",
+  background:"Black",
+  width:"250px",
+  height:"300px",
+  padding:"20px 25px",
+  marginRight:"10px",
+  boxShadow: '0px 0px 3px rgba(0, 0, 0, 0.5)',
+  transition: 'transform 0.2s ease', // Add a transition for smoother effects
+  '&:hover': {
+    transform: 'translateY(3px)', // or 'translateY(0px)' depending on your preference
+  },
+  "@media (max-width: 600px)": {
+    width: "95%", 
+    marginBottom:"10px"
+  },
+})
 
+export const CardTitle = styled(Typography)({
+  fontSize:"18px",
+  fontFamily: "'Poppins', sans-serif",
+  fontWeight:"600",
+  color:"white"
+})
+
+export const CreatorDetails = styled("div")({
+  display:"flex",
+  justifyContent:"center",
+  alignItems:"center",
+  marginBottom:"10px"
+})
+
+export const CreatorName =styled("div")({
+  display:"flex",
+  justifyContent:"center",
+  alignItems:"center",
+  color:"white"
+})
+
+export const CreatorButton = styled("div")({
+  display:"flex",
+  justifyContent:"space-between",
+  alignItems:"center",
+  width:"90%",
+  height:"50px",
+  border:"1px solid #828792",
+  borderRadius:"5px",
+  padding:"5px"
+})
+
+export const PriceDiv = styled("div")({
+  display:"flex"
+})
+
+export const BidButton = styled("div")({
+  display:"flex",
+  justifyContent:"space-between",
+  alignItems:"center",
+  width:"50px",
+  height:"30px",
+  background:"yellow",
+  borderRadius:"3px",
+  padding:"5px",
+  cursor:"pointer"
+})
