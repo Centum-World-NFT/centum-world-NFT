@@ -54,8 +54,9 @@ const CardContent = () => {
             </CollectionNameBox>
           </LeftBox>
           <RightBox>
-           <RightUperBox>
-           <VolumeDiv>
+            
+            <RightUperBox>
+            <VolumeDiv>
               <VolumeLabelDiv>
                 <VolumeLabel>VOLUME</VolumeLabel>
               </VolumeLabelDiv>
@@ -86,7 +87,7 @@ const CardContent = () => {
                 </PerChangeValueDiv>
               </PerChangeContentDiv>
             </PerChangeDiv>
-           </RightUperBox>
+            </RightUperBox>
 
             <RightLowerBox>
             <VolumeDiv>
@@ -116,6 +117,7 @@ const CardContent = () => {
               </SalesValueDiv>
             </SalesDiv>
             </RightLowerBox>
+           
           </RightBox>
         </MainDiv>
       </Wrapper>

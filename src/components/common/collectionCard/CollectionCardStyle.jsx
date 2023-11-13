@@ -5,7 +5,6 @@ export const WrapDiv = styled(Box)({
     display:'flex',
     flexDirection: 'column' , 
     gap:'1.5rem',
-    border:'1px solid red'
 });
 
 
