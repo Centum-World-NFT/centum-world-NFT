@@ -5,7 +5,24 @@ const Header = () => {
         <p className="text-vulcan-50 font-Poppins font-bold text-2xl">
           Centum NFT
         </p>
-        <div className="text-vulcan-50 font-Poppins font-normal text-xl">
+        <div className="block md:hidden">
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="#fff"
+              className="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div className="text-vulcan-50 font-Poppins font-normal text-xl hidden md:block">
           <ul className="flex gap-10">
             <li className="flex items-center cursor-pointer">
               Home{" "}

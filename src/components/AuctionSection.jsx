@@ -6,6 +6,20 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import cardIMg from "../assets/img/cardItem.jpg";
 
 const AuctionSection = () => {
+  const breakpoints = {
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  };
   return (
     <div className="bg-vulcan-950 w-full pt-10">
       <div className="w-11/12 m-auto">
@@ -14,28 +28,14 @@ const AuctionSection = () => {
         </p>
         <div className="mt-10">
           <Swiper
-            slidesPerView={4}
+            // slidesPerView={1}
             spaceBetween={100}
             grabCursor={true}
             autoplay={{
-              delay: 1500,
+              delay: 900,
               disableOnInteraction: false,
             }}
-            centeredSlides={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 50,
-              },
-            }}
+            breakpoints={breakpoints}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"

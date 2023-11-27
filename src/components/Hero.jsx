@@ -9,10 +9,10 @@ const Hero = () => {
   return (
     <div className="bg-vulcan-950 relative">
       <img src={gradient1} alt="" className="absolute top-0" />
-      <img src={gradient2} alt="" className="absolute left-2/4 bottom-0" />
-      <img src={gradient3} alt="" className="absolute right-0" />
+      <img src={gradient2} alt="" className="absolute left-2/4 bottom-0 hidden lg:block" />
+      <img src={gradient3} alt="" className="absolute right-0 " />
       <div className="w-4/5 m-auto flex justify-between p-5">
-        <div className="relative w-2/6 flex justify-center">
+        <div className="relative w-2/6 justify-center hidden md:flex">
           <img src={heroImg} alt="heroImg" className="z-10 slide-top" />
           <img
             src={ringImg}
