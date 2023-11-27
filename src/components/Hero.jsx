@@ -7,7 +7,7 @@ import ContentSection from "./ContentSection";
 
 const Hero = () => {
   return (
-    <div className="bg-vulcan-950 relative">
+    <div className="bg-vulcan-950 relative overflow-hidden">
       <img src={gradient1} alt="" className="absolute top-0" />
       <img src={gradient2} alt="" className="absolute left-2/4 bottom-0 hidden lg:block" />
       <img src={gradient3} alt="" className="absolute right-0 " />
