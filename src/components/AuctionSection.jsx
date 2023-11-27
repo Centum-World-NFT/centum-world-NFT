@@ -22,7 +22,7 @@ const AuctionSection = () => {
   };
   return (
     <div className="bg-vulcan-950 w-full pt-10">
-      <div className="w-11/12 m-auto">
+      <div className="w-4/5 m-auto">
         <p className="text-vulcan-50 font-Poppins text-2xl font-bold">
           New In Market
         </p>
