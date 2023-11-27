@@ -5,8 +5,6 @@ const Header = () => {
   const handleToggle = () => {
     setShowMenu((prev) => !prev);
   };
-
-  console.log(showMenu);
   return (
     <>
       {showMenu && (

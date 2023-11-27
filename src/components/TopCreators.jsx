@@ -6,6 +6,20 @@ import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import creatorAV from "../assets/img/creatorAV.jpg";
 
 const TopCreators = () => {
+  const breakpoints = {
+    320: {
+      slidesPerView: 2,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  };
   return (
     <div className="w-full bg-vulcan-950 pt-20 pb-20">
       <div className="w-4/5 m-auto ">
@@ -47,9 +61,10 @@ const TopCreators = () => {
             slidesPerView={6}
             freeMode={true}
             autoplay={{
-                delay: 1200,
-                disableOnInteraction: false,
-              }}
+              delay: 1200,
+              disableOnInteraction: false,
+            }}
+            breakpoints={breakpoints}
             modules={[FreeMode, Pagination, Autoplay]}
             className="mySwiper"
           >
