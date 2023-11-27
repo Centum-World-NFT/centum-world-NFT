@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slide-top {
+  animation: slide-top 9s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    alternate-reverse forwards;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+.slide-right {
+  animation: slide-right 8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
