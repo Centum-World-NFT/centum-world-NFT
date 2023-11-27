@@ -1,3 +1,4 @@
+import AuctionSection from "../components/AuctionSection";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <>
       <Header />
       <Hero />
+      <AuctionSection />
     </>
   );
 };
