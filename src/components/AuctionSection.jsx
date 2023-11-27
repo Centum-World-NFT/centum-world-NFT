@@ -15,11 +15,8 @@ const AuctionSection = () => {
         <div className="mt-10">
           <Swiper
             slidesPerView={4}
-            spaceBetween={30}
+            spaceBetween={100}
             grabCursor={true}
-            pagination={{
-              clickable: true,
-            }}
             autoplay={{
               delay: 1500,
               disableOnInteraction: false,
@@ -60,7 +57,7 @@ const AuctionSection = () => {
                     </div>
                     <div className="mt-5 font-Poppins text-vulcan-50 font-bold flex justify-between">
                       <p>&ldquo;Hii This is React Basic..</p>
-                      <p className="bg-violet-600 rounded-md">Python</p>
+                      <p className="text-violet-600">Python</p>
                     </div>
                   </div>
                 </SwiperSlide>
