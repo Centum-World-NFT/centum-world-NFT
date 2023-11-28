@@ -4,6 +4,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import creatorAV from "../assets/img/creatorAV.jpg";
+import ReactStars from "react-rating-stars-component";
 
 const TopCreators = () => {
   const breakpoints = {
@@ -71,7 +72,24 @@ const TopCreators = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
               <>
                 <SwiperSlide key={index}>
-                  <img src={creatorAV} alt="" className="rounded-3xl" />
+                  <div className="flex items-start gap-2 w-max">
+                    <img src={creatorAV} alt="" className="rounded-3xl" />
+                    <div>
+                      <p className="font-Poppins text-vulcan-50 font-medium">
+                        Jhone Doe
+                      </p>
+                      <ReactStars
+                        count={5}
+                        edit={false}
+                        size={24}
+                        isHalf={true}
+                        emptyIcon={<i className="far fa-star"></i>}
+                        halfIcon={<i className="fa fa-star-half-alt"></i>}
+                        fullIcon={<i className="fa fa-star"></i>}
+                        activeColor="#ffd700"
+                      />
+                    </div>
+                  </div>
                 </SwiperSlide>
               </>
             ))}
