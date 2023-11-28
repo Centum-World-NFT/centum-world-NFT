@@ -72,7 +72,7 @@ const TopCreators = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
               <>
                 <SwiperSlide key={index}>
-                  <div className="flex items-start gap-2 w-max">
+                  <div className="md:flex-row flex-col items-start gap-2 w-max">
                     <img src={creatorAV} alt="" className="rounded-3xl" />
                     <div>
                       <p className="font-Poppins text-vulcan-50 font-medium">
