@@ -28,3 +28,19 @@
     transform: translateX(100px);
   }
 }
+
+.flip-2-ver-right-1 {
+  animation: flip-2-ver-right-1 2s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    infinite alternate-reverse both;
+}
+
+@keyframes flip-2-ver-right-1 {
+  0% {
+    transform: translateX(0) rotateY(0);
+    transform-origin: 100% 50%;
+  }
+  100% {
+    transform: translateX(100%) rotateY(-180deg);
+    transform-origin: 0 50%;
+  }
+}

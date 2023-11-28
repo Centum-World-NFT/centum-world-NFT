@@ -1,3 +1,4 @@
+import Accordions from "../components/Accordions";
 import AuctionSection from "../components/AuctionSection";
 import BestCourse from "../components/BestCourse";
 import DescriptionSection from "../components/DescriptionSection";
@@ -14,6 +15,7 @@ const HomePage = () => {
       <DescriptionSection />
       <TopCreators />
       <BestCourse />
+      <Accordions />
     </>
   );
 };

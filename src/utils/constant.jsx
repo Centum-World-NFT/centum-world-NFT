@@ -28,3 +28,49 @@ const createNFT = [
 ];
 
 export default createNFT;
+
+export const accordionQuestion = [
+  {
+    id: 1,
+    question: "Hii Hello",
+    answer: "Hello Hii",
+  },
+  {
+    id: 2,
+    question: "Ok Ok",
+    answer: "Kaise Ho",
+  },
+];
+
+export const UpArrow = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="#fff"
+    className="h-[30px] w-[30px] inline-block"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M5 15l7-7 7 7"
+    />
+  </svg>
+);
+export const DownArrow = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="#fff"
+    className="h-[30px] w-[30px] inline-block"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M19 9l-7 7-7-7"
+    />
+  </svg>
+);
