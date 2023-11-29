@@ -1,6 +1,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlash } from "../utils/icons";
 
 // eslint-disable-next-line react/prop-types
@@ -29,7 +29,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
       >
         <label className="w-full ">
           <p className="text-vulcan-50 mb-1">
-            Email address<sup className="text-pink-200">*</sup>
+            Email address<sup className="text-[#ef476f]">*</sup>
           </p>
           <input
             className="bg-richblack-700 flex items-center px-[12px] py-[8px] w-full rounded-md placeholder:text-sm text-white focus:outline-none border-b-richblack-100 border-b-2"
@@ -43,8 +43,8 @@ const LoginForm = ({ setIsLoggedIn }) => {
         </label>
 
         <label className="w-full relative">
-          <p className="text-white mb-1">
-            Password<sup className="text-pink-200">*</sup>
+          <p className="text-vulcan-50 mb-1">
+            Password<sup className="text-[#ef476f]">*</sup>
           </p>
           <input
             className="bg-richblack-700 flex items-center px-[12px] py-[8px] w-full rounded-md placeholder:text-sm text-white focus:outline-none border-b-richblack-100 border-b-2"
@@ -66,12 +66,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             )}
           </span>
         </label>
-        <Link to="#">
-          <p className="text-blue-100 text-sm max-w-max ml-auto">
-            Forgot Password ?
-          </p>
-        </Link>
-        <button className="bg-yellow-500 px-[12px] py-[8px] rounded-md mb-4">
+        <button className="border  border-violet-600 font-Poppins text-vulcan-50 font-bold px-[12px] py-[8px] rounded-md mb-4 hover:bg-gradient-to-tr from-violet-600 hover:to-indigo-600 transition-all duration-700 ease-in-out hover:border-vulcan-50">
           Sign In
         </button>
       </form>
