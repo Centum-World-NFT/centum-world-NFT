@@ -2,6 +2,7 @@ import Accordions from "../components/Accordions";
 import AuctionSection from "../components/AuctionSection";
 import BestCourse from "../components/BestCourse";
 import DescriptionSection from "../components/DescriptionSection";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import TopCreators from "../components/TopCreators";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <TopCreators />
       <BestCourse />
       <Accordions />
+      <Footer />
     </>
   );
 };

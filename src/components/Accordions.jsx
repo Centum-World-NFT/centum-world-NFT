@@ -24,15 +24,15 @@ const Accordions = () => {
             >
               <h2 className="text-lg font-semibold font-Poppins text-vulcan-100">
                 <span className="bg-vulcan-950 p-2 rounded-md mr-2 font-Poppins">
-                  {index}
+                  {index+1}
                 </span>
                 {item.question}
               </h2>
               {activeIndex === index ? <UpArrow /> : <DownArrow />}
             </div>
             {activeIndex === index && (
-              <div className="p-2">
-                <p className="text-vulcan-100 bg-vulcan-600 p-5 md:w-1/2 w-full m-auto  rounded-full transition-all duration-200 font-Poppins font-semibold ">
+              <div className="p-4">
+                <p className="text-vulcan-100 bg-vulcan-600 px-10 py-5 md:w-2/3 w-full m-auto text-justify  rounded-full transition-all duration-200 font-Poppins font-semibold ">
                   {item.answer}
                 </p>
               </div>
