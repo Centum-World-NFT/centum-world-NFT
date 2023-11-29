@@ -1,3 +1,5 @@
+import {  NavLink } from "react-router-dom";
+
 const ContentSection = () => {
   return (
     <div className="md:w-2/4 w-full flex items-center relative z-10">
@@ -17,8 +19,16 @@ const ContentSection = () => {
           Monster NFT
         </p>
         <div className="flex justify-end gap-2">
-          <button className="border bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out ">Sign In</button>
-          <button className="border bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all z-20 hover:border-vulcan-50 ease-in-out ">Sign Up</button>
+          <NavLink to="/login">
+            <button className="border bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out ">
+              Sign In
+            </button>
+          </NavLink>
+          <a href="">
+            <button className="border bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all z-20 hover:border-vulcan-50 ease-in-out ">
+              Sign Up
+            </button>
+          </a>
         </div>
         <p className="font-Poppins text-vulcan-50 mt-20 w-full text-right text-xl">
           Marketplace for monster character cllections non fungible token NFTs
