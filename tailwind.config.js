@@ -7,6 +7,7 @@ export default {
     },
     colors: {
       vulcan: {
+        0: "#00000000",
         50: "#f5f5fa",
         100: "#ebebf3",
         200: "#d2d3e5",
