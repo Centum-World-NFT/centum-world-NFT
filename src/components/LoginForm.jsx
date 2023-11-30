@@ -45,7 +45,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
       >
         <label className="w-full ">
           <p className="text-vulcan-50 mb-1">
-            Email address<sup className="text-[#ef476f]">*</sup>
+          Email address or phone<sup className="text-[#ef476f]">*</sup>
           </p>
           <input
             className="bg-richblack-700 flex items-center px-[12px] py-[8px] w-full rounded-md placeholder:text-sm text-white focus:outline-none border-b-richblack-100 border-b-2"
@@ -53,7 +53,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             required
             value={formData.emailorPhone}
             onChange={changeHanlder}
-            placeholder="Enter Email address"
+            placeholder="Email address or phone"
             name="emailorPhone"
           />
         </label>
