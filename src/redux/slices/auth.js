@@ -1,14 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { signUpAPI } from "../apis/authAPI";
 import { signInAPI } from "../apis/authAPI";
+import toast from "react-hot-toast";
 
 export const signUp = createAsyncThunk("auth/signUp", async (payload) => {
   try {
     const response = await signUpAPI(payload);
+    console.log(response)
     return response.data;
   } catch (error) {
-    console.log(error.message);
-    throw error;
+    toast.error(error.response.data.message); 
+
   }
 });
 
@@ -17,8 +19,7 @@ export const signIn = createAsyncThunk("auth/signIn", async (payload) => {
     const response = await signInAPI(payload);
     return response.data;
   } catch (error) {
-    console.log(error.message);
-    throw error;
+    toast.error(error.response.data.message); 
   }
 });
 
@@ -47,11 +48,11 @@ const authSlice = createSlice({
       })
       .addCase(signUp.rejected, (state, action) => {
         state.isLoading = false;
-        console.log("Error", action.error.message);
+        state.data = null; 
         state.isError = true;
       })
 
-      // login
+    // login
       .addCase(signIn.pending, (state) => {
         state.isLoading = true;
         state.data = null;
