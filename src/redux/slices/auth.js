@@ -5,6 +5,7 @@ import { signInAPI } from "../apis/authAPI";
 export const signUp = createAsyncThunk("auth/signUp", async (payload) => {
   try {
     const response = await signUpAPI(payload);
+    console.log(response)
     return response.data;
   } catch (error) {
     console.log(error.message);
@@ -47,11 +48,11 @@ const authSlice = createSlice({
       })
       .addCase(signUp.rejected, (state, action) => {
         state.isLoading = false;
-        console.log("Error", action.error.message);
+        state.data = action.payload
         state.isError = true;
       })
 
-      // login
+    // login
       .addCase(signIn.pending, (state) => {
         state.isLoading = true;
         state.data = null;

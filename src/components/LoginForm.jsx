@@ -2,11 +2,13 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlash } from "../utils/icons";
+import { signIn } from "../redux/slices/auth";
+import { useDispatch } from "react-redux";
 
-// eslint-disable-next-line react/prop-types
 const LoginForm = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({ email: "", password: "" });
+  const dispatch = useDispatch();
+  const [formData, setFormData] = useState({ emailorPhone: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   function changeHanlder(event) {
     event.preventDefault();
@@ -15,11 +17,22 @@ const LoginForm = ({ setIsLoggedIn }) => {
       [event.target.name]: event.target.value,
     }));
   }
-  function singInHandler(event) {
+  async function singInHandler(event) {
     event.preventDefault();
-    setIsLoggedIn(true);
-    toast.success("Logged In");
-    navigate("/dashboard");
+    try {
+      const { ...accountData } = formData;
+      const response = await dispatch(signIn(accountData));
+      if (response) {
+        setIsLoggedIn(true);
+        toast.success("Sign In Successful");
+        navigate("/");
+      } else {
+        toast.error("Invalid credentials. Please try again.");
+      }
+    } catch (error) {
+      console.error("SignIn finailed:", error);
+      toast.error("SignIn failed. Please try again.");
+    }
   }
   return (
     <>
@@ -33,12 +46,12 @@ const LoginForm = ({ setIsLoggedIn }) => {
           </p>
           <input
             className="bg-richblack-700 flex items-center px-[12px] py-[8px] w-full rounded-md placeholder:text-sm text-white focus:outline-none border-b-richblack-100 border-b-2"
-            type="email"
+            type="emailorPhone"
             required
-            value={formData.email}
+            value={formData.emailorPhone}
             onChange={changeHanlder}
             placeholder="Enter Email address"
-            name="email"
+            name="emailorPhone"
           />
         </label>
 
