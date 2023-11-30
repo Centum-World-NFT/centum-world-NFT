@@ -2,9 +2,12 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlash } from "../utils/icons";
+import { signUp } from "../redux/slices/auth";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function SignupForm({ setIsLoggedIn }) {
-  const [accountType, setAccountType] = useState("student");
+  const [accountType, setAccountType] = useState("user");
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -28,7 +31,7 @@ function SignupForm({ setIsLoggedIn }) {
     if (formData.password !== formData.confirmPassword) {
       toast.error("Password Missmatched");
       return;
-    }
+    };
     setIsLoggedIn(true);
     toast.success("Account Created Succesfully");
     const accountData = {
@@ -46,21 +49,21 @@ function SignupForm({ setIsLoggedIn }) {
       <div className="flex gap-x-2 bg-vulcan-900 my-6 rounded-full max-w-max p-1">
         <button
           className={`${
-            accountType === "student"
+            accountType === "user"
               ? "bg-vulcan-950 text-vulcan-50"
               : "bg-transparent text-black"
           } py-2 px-5 rounded-full transition-all duration-200" `}
-          onClick={() => setAccountType("student")}
+          onClick={() => setAccountType("user")}
         >
           User
         </button>
         <button
           className={`${
-            accountType !== "student"
+            accountType !== "user"
               ? "bg-vulcan-950 text-vulcan-50"
               : "bg-transparent text-black"
           } py-2 px-5 rounded-full transition-all duration-200" `}
-          onClick={() => setAccountType("teacher")}
+          onClick={() => setAccountType("creator")}
         >
           Creator
         </button>
