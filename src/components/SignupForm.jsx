@@ -3,22 +3,25 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlash } from "../utils/icons";
 import { signUp } from "../redux/slices/auth";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useDispatch } from "react-redux";
 
 function SignupForm({ setIsLoggedIn }) {
   const [accountType, setAccountType] = useState("user");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     firstName: "",
-    lastName: "",
+    surName: "",
     email: "",
-    phoneNumber: "",
     password: "",
+    phone: "",
     confirmPassword: "",
   });
+
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword1, setShowPassword1] = useState(false);
+
   function changeHandler(event) {
     event.preventDefault();
     setFormData((prevData) => ({
@@ -26,24 +29,31 @@ function SignupForm({ setIsLoggedIn }) {
       [event.target.name]: event.target.value,
     }));
   }
-  function submitHanlder(event) {
+
+  async function submitHandler(event) {
     event.preventDefault();
+
     if (formData.password !== formData.confirmPassword) {
-      toast.error("Password Missmatched");
+      toast.error("Password Mismatched");
       return;
-    };
-    setIsLoggedIn(true);
-    toast.success("Account Created Succesfully");
-    const accountData = {
-      ...formData,
-    };
-    const finalData = {
-      ...accountData,
-      ...accountType,
-    };
-    navigate("/dashboard");
-    console.log(finalData);
+    }
+
+    try {
+      const { confirmPassword, ...accountData } = formData;
+      accountData.role = accountType;
+      const response = await dispatch(signUp(accountData));
+      if (response.payload.status === true) {
+        setIsLoggedIn(true);
+        toast.success(response.payload.message);
+        navigate("/");
+      }else{
+        toast.error(response.payload.message);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   }
+
   return (
     <div>
       <div className="flex gap-x-2 bg-vulcan-900 my-6 rounded-full max-w-max p-1">
@@ -69,7 +79,7 @@ function SignupForm({ setIsLoggedIn }) {
         </button>
       </div>
       <form
-        onSubmit={submitHanlder}
+        onSubmit={submitHandler}
         className="flex flex-col gap-y-2 mt-[20px]"
       >
         <div className="flex gap-x-5">
@@ -96,9 +106,9 @@ function SignupForm({ setIsLoggedIn }) {
               className="bg-richblack-700 flex items-center w-[100%] px-[12px] py-[8px] rounded-md placeholder:text-sm text-white focus:outline-none border-b-richblack-100 border-b-2"
               type="text"
               required
-              name="lastName"
+              name="surName"
               onChange={changeHandler}
-              value={formData.lastName}
+              value={formData.surName}
               placeholder="Last Name"
             />
           </label>
@@ -124,11 +134,11 @@ function SignupForm({ setIsLoggedIn }) {
           </p>
           <input
             className="bg-richblack-700 flex items-center px-[12px] py-[8px] w-[100%] rounded-md placeholder:text-sm text-white focus:outline-none border-b-richblack-100 border-b-2"
-            type="phoneNumber"
+            type="phone"
             required
-            name="phoneNumber"
+            name="phone"
             onChange={changeHandler}
-            value={formData.phoneNumber}
+            value={formData.phone}
             placeholder="Enter phone number"
           />
         </label>
