@@ -4,6 +4,7 @@ import bgImg from "../assets/img/bg-img.jpg";
 import { NavLink } from "react-router-dom";
 
 
+// eslint-disable-next-line react/prop-types
 const SignupPage = ({ setIsLoggedIn }) => {
   return (
     <>

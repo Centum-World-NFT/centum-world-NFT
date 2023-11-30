@@ -7,10 +7,10 @@ import { NavLink } from "react-router-dom";
 const LoginPage = ({ setIsLoggedIn }) => {
   return (
     <>
-      <div className="relative top-0 hidden md:block">
-        <img src={bgImg} alt="" />
-        <div className="absolute top-1/2 right-1/2 font-Poppins text-vulcan-50 font-extrabold text-5xl text-center">
-          Login
+      <div className="md:block relative">
+        <img className="h-28 w-full object-cover" src={bgImg} alt="" />
+        <div className="absolute top-3.5 right-[46%] font-Poppins text-vulcan-50 font-extrabold text-5xl text-center">
+          <p>Login</p>
           <p className="text-sm font-normal mt-2">
             <NavLink to="/">Home</NavLink> / Login
           </p>

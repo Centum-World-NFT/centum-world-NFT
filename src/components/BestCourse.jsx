@@ -13,7 +13,7 @@ const BestCourse = () => {
             <>
               <div
                 key={index}
-                className="h-max bg-vulcan-900 rounded-md p-4 flex-col hover:bg-vulcan-50 transition-all duration-200 hover:skew-y-3"
+                className="h-max bg-vulcan-900 group rounded-md p-4 flex-col hover:bg-vulcan-50 transition-all duration-200 hover:skew-y-3"
               >
                 <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                   <img src={cardIMg} alt="" className="rounded-md" />
@@ -26,7 +26,7 @@ const BestCourse = () => {
                     </button>
                   </div>
                 </div>
-                <div className="mt-5 font-Poppins text-vulcan-950 font-bold flex justify-between">
+                <div className="mt-5 font-Poppins text-vulcan-50 group-hover:text-vulcan-950 font-bold flex justify-between">
                   <p>&ldquo;Hii This is React Basic..</p>
                   <p className="text-violet-600">Python</p>
                 </div>
@@ -41,7 +41,7 @@ const BestCourse = () => {
                       <p className="font-Poppins text-xs opacity-50">Creator</p>
                       <a
                         href=""
-                        className="font-Poppins text-md font-bold text-vulcan-950 transition-all duration-200"
+                        className="font-Poppins text-md font-bold text-vulcan-50 transition-all duration-200 group-hover:text-vulcan-950"
                       >
                         Jhon Doe
                       </a>
@@ -49,7 +49,7 @@ const BestCourse = () => {
                   </div>
                   <div>
                     <p className="font-Poppins text-xs opacity-50">Price</p>
-                    <p className="font-Poppins text-md font-bold text-vulcan-950">
+                    <p className="font-Poppins text-md font-bold text-vulcan-50 group-hover:text-vulcan-950">
                       4999/-
                     </p>
                   </div>

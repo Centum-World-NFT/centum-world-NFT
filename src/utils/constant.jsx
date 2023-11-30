@@ -102,3 +102,22 @@ export const DownArrow = () => (
     />
   </svg>
 );
+
+export const NavMenu = [
+  {
+    id: 1,
+    title: "Home"
+  },
+  {
+    id: 2,
+    title: "Explore"
+  },
+  {
+    id: 3,
+    title: "Community"
+  },
+  {
+    id: 4,
+    title: "Contact"
+  }
+]

@@ -9,10 +9,10 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
-      <Header />
+      <Header  isLoggedIn={isLoggedIn}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn}/>} />
+        <Route path="/login" element={<LoginPage setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}/>} />
         <Route path="/signup" element={<SignupPage setIsLoggedIn={setIsLoggedIn}/>} />
       </Routes>
     </>

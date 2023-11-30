@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { NavMenu } from "../utils/constant";
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ isLoggedIn }) => {
   const [showMenu, setShowMenu] = useState(false);
+
   const handleToggle = () => {
     setShowMenu((prev) => !prev);
   };
@@ -11,70 +14,29 @@ const Header = () => {
       {showMenu && (
         <div className="absolute top-16 h-max bg-vulcan-900 right-9 z-20 rounded-md p-4">
           <ul className="text-vulcan-50 flex-col gap-10">
-            <li className="flex items-center justify-between cursor-pointer">
-              Home{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </li>
-            <li className="flex items-center justify-between cursor-pointer">
-              Explore{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </li>
-            <li className="flex items-center justify-between cursor-pointer">
-              Community{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </li>
-            <li className="flex items-center justify-between cursor-pointer">
-              Contact{" "}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </li>
+            {NavMenu.map((item) => (
+              <>
+                <li
+                  className="flex items-center justify-between cursor-pointer"
+                  key={item.id}
+                >
+                  {item.title}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    className="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </li>
+              </>
+            ))}
           </ul>
         </div>
       )}
@@ -183,13 +145,17 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="flex justify-end gap-2">
-          <NavLink to="/login">
-            <button className="border hidden md:block bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out ">
-              Sign In
-            </button>
-          </NavLink>
-        </div>
+          <div>
+            {!isLoggedIn ? (
+              <NavLink to="/login">
+                <button className="border hidden md:block bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out ">
+                  Sign In
+                </button>
+              </NavLink>
+            ) : (
+              <img src="" alt="" />
+            )}
+          </div>
         </div>
       </div>
     </>
