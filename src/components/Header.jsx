@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -182,6 +183,13 @@ const Header = () => {
               </li>
             </ul>
           </div>
+          <div className="flex justify-end gap-2">
+          <NavLink to="/login">
+            <button className="border hidden md:block bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out ">
+              Sign In
+            </button>
+          </NavLink>
+        </div>
         </div>
       </div>
     </>
