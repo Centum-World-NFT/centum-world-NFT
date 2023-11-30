@@ -197,7 +197,7 @@ function SignupForm({ setIsLoggedIn }) {
             </span>
           </label>
         </div>
-        <button className="border border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out">
+        <button className="border mt-2 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out">
           Create Account
         </button>
       </form>

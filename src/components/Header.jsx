@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { NavMenu } from "../utils/constant";
 
 // eslint-disable-next-line react/prop-types
-const Header = ({ isLoggedIn }) => {
+const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const handleToggle = () => {
@@ -144,17 +144,6 @@ const Header = ({ isLoggedIn }) => {
                 </svg>
               </li>
             </ul>
-          </div>
-          <div>
-            {!isLoggedIn ? (
-              <NavLink to="/login">
-                <button className="border hidden md:block bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out ">
-                  Sign In
-                </button>
-              </NavLink>
-            ) : (
-              <img src="" alt="" />
-            )}
           </div>
         </div>
       </div>

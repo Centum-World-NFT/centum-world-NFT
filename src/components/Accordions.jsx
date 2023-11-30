@@ -19,7 +19,7 @@ const Accordions = () => {
         {accordionQuestion.map((item, index) => (
           <div key={index} className="my-2">
             <div
-              className="bg-vulcan-900 md:w-1/2 w-full m-auto p-5 cursor-pointer rounded-full transition-all duration-200 flex justify-between items-center"
+              className="bg-vulcan-900 md:w-1/2 w-full m-auto p-5 cursor-pointer rounded-3xl transition-all duration-200 flex justify-between items-center"
               onClick={() => handleItemClick(index)}
             >
               <h2 className="text-lg font-semibold font-Poppins text-vulcan-100">
@@ -31,8 +31,8 @@ const Accordions = () => {
               {activeIndex === index ? <UpArrow /> : <DownArrow />}
             </div>
             {activeIndex === index && (
-              <div className="p-4">
-                <p className="text-vulcan-100 bg-vulcan-600 px-10 py-5 md:w-2/3 w-full m-auto text-justify  rounded-full transition-all duration-200 font-Poppins font-semibold ">
+              <div className="mt-2">
+                <p className="text-vulcan-100 bg-vulcan-600 px-10 py-5 md:w-2/3 w-full m-auto text-justify rounded-3xl transition-all duration-200 font-Poppins font-semibold ">
                   {item.answer}
                 </p>
               </div>

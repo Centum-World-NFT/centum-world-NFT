@@ -82,7 +82,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             )}
           </span>
         </label>
-        <button className="border  border-violet-600 font-Poppins text-vulcan-50 font-bold px-[12px] py-[8px] rounded-md mb-4 hover:bg-gradient-to-tr from-violet-600 hover:to-indigo-600 transition-all duration-700 ease-in-out hover:border-vulcan-50">
+        <button className="border mt-2 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out">
           Sign In
         </button>
       </form>
