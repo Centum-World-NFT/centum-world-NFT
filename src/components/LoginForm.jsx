@@ -26,7 +26,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
         if (response.payload.data.role === "creator") {
           setIsLoggedIn(true);
           toast.success(response.payload.message);
-          navigate("https://centum-world-nft-creator.netlify.app/");
+          window.open("https://centum-world-nft-creator.netlify.app/");
         } else if (response.payload.data.role === "user") {
           setIsLoggedIn(true);
           toast.success(response.payload.message);
