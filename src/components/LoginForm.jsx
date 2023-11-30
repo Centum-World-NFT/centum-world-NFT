@@ -22,16 +22,19 @@ const LoginForm = ({ setIsLoggedIn }) => {
     try {
       const { ...accountData } = formData;
       const response = await dispatch(signIn(accountData));
-      if (response) {
-        setIsLoggedIn(true);
-        toast.success("Sign In Successful");
-        navigate("/");
-      } else {
-        toast.error("Invalid credentials. Please try again.");
+      if (response.payload.status) {
+        if (response.payload.data.role === "creator") {
+          setIsLoggedIn(true);
+          toast.success(response.payload.message);
+          navigate("https://centum-world-nft-creator.netlify.app/");
+        } else if (response.payload.data.role === "user") {
+          setIsLoggedIn(true);
+          toast.success(response.payload.message);
+          navigate("/");
+        }
       }
     } catch (error) {
-      console.error("SignIn finailed:", error);
-      toast.error("SignIn failed. Please try again.");
+      throw error;
     }
   }
   return (

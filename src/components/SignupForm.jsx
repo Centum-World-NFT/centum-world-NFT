@@ -43,14 +43,18 @@ function SignupForm({ setIsLoggedIn }) {
       accountData.role = accountType;
       const response = await dispatch(signUp(accountData));
       if (response.payload.status === true) {
-        setIsLoggedIn(true);
-        toast.success(response.payload.message);
-        navigate("/");
-      }else{
-        toast.error(response.payload.message);
+        if (response.payload.data.role === "creator") {
+          setIsLoggedIn(true);
+          toast.success(response.payload.message);
+          navigate("https://centum-world-nft-creator.netlify.app/");
+        } else if (response.payload.data.role === "user") {
+          setIsLoggedIn(true);
+          toast.success(response.payload.message);
+          navigate("/");
+        }
       }
     } catch (error) {
-      toast.error(error.message);
+      throw error
     }
   }
 
