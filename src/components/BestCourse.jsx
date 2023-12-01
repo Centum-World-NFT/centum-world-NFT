@@ -1,11 +1,21 @@
+import { useSelector } from "react-redux";
 import cardIMg from "../assets/img/cardItem.jpg";
 import creatorAV from "../assets/img/creatorAV.jpg";
 
 const BestCourse = () => {
+  const lightmode = useSelector((state) => state.theme.lightTheme);
   return (
-    <div className="bg-vulcan-950 w-full pt-10 pb-10">
+    <div
+      className={`${
+        lightmode ? `bg-vulcan-50` : `bg-vulcan-950`
+      } w-full pt-10 pb-10`}
+    >
       <div className="w-4/5 m-auto">
-        <p className="text-vulcan-50 font-Poppins text-2xl font-bold">
+        <p
+          className={`${
+            lightmode ? `text-vulcan-950` : `text-vulcan-50`
+          } font-Poppins text-2xl font-bold`}
+        >
           Top Seller
         </p>
         <div className="w-full flex flex-wrap justify-evenly gap-5 mt-10">
@@ -13,7 +23,7 @@ const BestCourse = () => {
             <>
               <div
                 key={index}
-                className="h-max bg-vulcan-900 group rounded-md p-4 flex-col hover:bg-vulcan-50 transition-all duration-200 hover:skew-y-3"
+                className={`h-max ${lightmode ? `bg-vulcan-700` : `bg-vulcan-900`} group rounded-md p-4 flex-col ${lightmode ? `hover:bg-vulcan-300` : `hover:bg-vulcan-50`} transition-all duration-200 hover:skew-y-3`}
               >
                 <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
                   <img src={cardIMg} alt="" className="rounded-md" />
@@ -26,7 +36,9 @@ const BestCourse = () => {
                     </button>
                   </div>
                 </div>
-                <div className="mt-5 font-Poppins text-vulcan-50 group-hover:text-vulcan-950 font-bold flex justify-between">
+                <div
+                  className={`mt-5 font-Poppins ${lightmode ? `text-vulcan-50` : `text-vulcan-50`}  group-hover:text-vulcan-950 font-bold flex justify-between`}
+                >
                   <p>&ldquo;Hii This is React Basic..</p>
                   <p className="text-violet-600">Python</p>
                 </div>
