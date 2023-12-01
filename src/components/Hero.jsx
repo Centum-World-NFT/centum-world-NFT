@@ -4,12 +4,22 @@ import gradient2 from "../assets/png/gradient-2.png";
 import gradient3 from "../assets/png/gradient-3.png";
 import ringImg from "../assets/png/bg-ring.png";
 import ContentSection from "./ContentSection";
+import { useSelector } from "react-redux";
 
 const Hero = () => {
+  const lightmode = useSelector((state) => state.theme.lightTheme);
   return (
-    <div className="bg-vulcan-950 relative overflow-hidden">
+    <div
+      className={`${
+        lightmode ? `bg-vulcan-50` : `bg-vulcan-950`
+      } relative overflow-hidden transition-all duration-300`}
+    >
       <img src={gradient1} alt="" className="absolute top-0" />
-      <img src={gradient2} alt="" className="absolute left-2/4 bottom-0 hidden lg:block" />
+      <img
+        src={gradient2}
+        alt=""
+        className="absolute left-2/4 bottom-0 hidden lg:block"
+      />
       <img src={gradient3} alt="" className="absolute right-0 " />
       <div className="w-4/5 m-auto flex justify-between p-5">
         <div className="relative w-2/6 justify-center hidden md:flex">
@@ -21,7 +31,7 @@ const Hero = () => {
           />
         </div>
         <>
-            <ContentSection />
+          <ContentSection />
         </>
       </div>
     </div>
