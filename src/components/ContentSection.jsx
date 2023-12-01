@@ -1,5 +1,4 @@
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const ContentSection = ({ isLoggedIn }) => {
@@ -32,7 +31,7 @@ const ContentSection = ({ isLoggedIn }) => {
         <div className="flex justify-end gap-2">
           {!isLoggedIn && (
             <>
-              <NavLink to="/login">
+              <a href="https://wwww.google.com">
                 <button
                   className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
                     lightmode ? `text-vulcan-950` : `text-vulcan-50`
@@ -42,10 +41,10 @@ const ContentSection = ({ isLoggedIn }) => {
                       : `hover:border-vulcan-50`
                   } ease-in-out ${lightmode ? `hover:text-vulcan-50` : ``}`}
                 >
-                  Sign In
+                  I&apos;m a User
                 </button>
-              </NavLink>
-              <NavLink to="/signup">
+              </a>
+              <a href="https://centum-world-nft-creator.netlify.app/">
                 <button
                   className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
                     lightmode ? `text-vulcan-950` : `text-vulcan-50`
@@ -55,9 +54,9 @@ const ContentSection = ({ isLoggedIn }) => {
                       : `hover:border-vulcan-50`
                   } ease-in-out ${lightmode ? `hover:text-vulcan-50` : ``}`}
                 >
-                  Sign Up
+                  I&apos;m a Creator
                 </button>
-              </NavLink>
+              </a>
             </>
           )}
         </div>
