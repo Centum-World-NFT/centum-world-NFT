@@ -5,8 +5,10 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import creatorAV from "../assets/img/creatorAV.jpg";
 import ReactStars from "react-rating-stars-component";
+import { useSelector } from "react-redux";
 
 const TopCreators = () => {
+  const lightmode = useSelector((state) => state.theme.lightTheme);
   const breakpoints = {
     320: {
       slidesPerView: 2,
@@ -22,10 +24,18 @@ const TopCreators = () => {
     },
   };
   return (
-    <div className="w-full bg-vulcan-950 pt-20 pb-20">
+    <div
+      className={`w-full ${
+        lightmode ? `bg-vulcan-50` : `bg-vulcan-950`
+      }  pt-20 pb-20`}
+    >
       <div className="w-4/5 m-auto ">
         <div className="flex items-center justify-between">
-          <p className="text-vulcan-50 font-Poppins text-2xl font-bold">
+          <p
+            className={`${
+              lightmode ? `text-vulcan-950` : `text-vulcan-50`
+            }  font-Poppins text-2xl font-bold`}
+          >
             Top Creators
           </p>
           <div className="flex items-center">
@@ -33,7 +43,7 @@ const TopCreators = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="30"
               height="30"
-              fill="#fff"
+              fill={lightmode ? `#000` : `#fff`}
               className="bi bi-arrow-left-short"
               viewBox="0 0 16 16"
             >
@@ -46,7 +56,7 @@ const TopCreators = () => {
               xmlns="http://www.w3.org/2000/svg"
               width="30"
               height="30"
-              fill="#fff"
+              fill={lightmode ? `#000` : `#fff`}
               className="bi bi-arrow-right-short"
               viewBox="0 0 16 16"
             >
@@ -72,10 +82,14 @@ const TopCreators = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
               <>
                 <SwiperSlide key={index}>
-                  <div className="md:flex-row flex-col items-start gap-2 w-max">
+                  <div className="md:flex-row flex-col items-center gap-2 w-max">
                     <img src={creatorAV} alt="" className="rounded-3xl" />
                     <div>
-                      <p className="font-Poppins text-vulcan-50 font-medium">
+                      <p
+                        className={`font-Poppins ${
+                          lightmode ? `text-vulcan-950` : `text-vulcan-50`
+                        }  font-medium text-center`}
+                      >
                         Jhone Doe
                       </p>
                       <ReactStars
