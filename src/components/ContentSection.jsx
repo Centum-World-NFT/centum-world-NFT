@@ -31,7 +31,7 @@ const ContentSection = ({ isLoggedIn }) => {
         <div className="flex justify-end gap-2">
           {!isLoggedIn && (
             <>
-              <a href="https://wwww.google.com">
+              <a href="">
                 <button
                   className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
                     lightmode ? `text-vulcan-950` : `text-vulcan-50`
