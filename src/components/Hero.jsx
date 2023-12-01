@@ -6,7 +6,8 @@ import ringImg from "../assets/png/bg-ring.png";
 import ContentSection from "./ContentSection";
 import { useSelector } from "react-redux";
 
-const Hero = () => {
+// eslint-disable-next-line react/prop-types
+const Hero = ({isLoggedIn}) => {
   const lightmode = useSelector((state) => state.theme.lightTheme);
   return (
     <div
@@ -31,7 +32,7 @@ const Hero = () => {
           />
         </div>
         <>
-          <ContentSection />
+          <ContentSection isLoggedIn={isLoggedIn} />
         </>
       </div>
     </div>

@@ -106,15 +106,15 @@ export const DownArrow = () => (
 export const NavMenu = [
   {
     id: 1,
-    title: "Home"
+    title: "Profile"
   },
   {
     id: 2,
-    title: "Explore"
+    title: "Vidyanam"
   },
   {
     id: 3,
-    title: "Community"
+    title: "Creators"
   },
   {
     id: 4,

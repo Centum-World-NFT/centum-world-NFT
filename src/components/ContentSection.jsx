@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-const ContentSection = () => {
+// eslint-disable-next-line react/prop-types
+const ContentSection = ({ isLoggedIn }) => {
   const lightmode = useSelector((state) => state.theme.lightTheme);
   return (
     <div className="md:w-2/4 w-full flex items-center relative z-10">
@@ -29,28 +30,36 @@ const ContentSection = () => {
           Monster NFT
         </p>
         <div className="flex justify-end gap-2">
-          <NavLink to="/login">
-            <button
-              className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
-                lightmode ? `text-vulcan-950` : `text-vulcan-50`
-              } font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all ${
-                lightmode ? `hover:border-vulcan-950` : `hover:border-vulcan-50`
-              } ease-in-out ${lightmode ? `hover:text-vulcan-50` : ``}`}
-            >
-              Sign In
-            </button>
-          </NavLink>
-          <NavLink to="/signup">
-            <button
-              className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
-                lightmode ? `text-vulcan-950` : `text-vulcan-50`
-              } font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all ${
-                lightmode ? `hover:border-vulcan-950` : `hover:border-vulcan-50`
-              } ease-in-out ${lightmode ? `hover:text-vulcan-50` : ``}`}
-            >
-              Sign Up
-            </button>
-          </NavLink>
+          {!isLoggedIn && (
+            <>
+              <NavLink to="/login">
+                <button
+                  className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
+                    lightmode ? `text-vulcan-950` : `text-vulcan-50`
+                  } font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all ${
+                    lightmode
+                      ? `hover:border-vulcan-950`
+                      : `hover:border-vulcan-50`
+                  } ease-in-out ${lightmode ? `hover:text-vulcan-50` : ``}`}
+                >
+                  Sign In
+                </button>
+              </NavLink>
+              <NavLink to="/signup">
+                <button
+                  className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
+                    lightmode ? `text-vulcan-950` : `text-vulcan-50`
+                  } font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all ${
+                    lightmode
+                      ? `hover:border-vulcan-950`
+                      : `hover:border-vulcan-50`
+                  } ease-in-out ${lightmode ? `hover:text-vulcan-50` : ``}`}
+                >
+                  Sign Up
+                </button>
+              </NavLink>
+            </>
+          )}
         </div>
         <p
           className={`font-Poppins ${

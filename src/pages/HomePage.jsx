@@ -6,10 +6,11 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import TopCreators from "../components/TopCreators";
 
-const HomePage = () => {
+// eslint-disable-next-line react/prop-types
+const HomePage = ({isLoggedIn}) => {
   return (
     <>
-      <Hero />
+      <Hero isLoggedIn={isLoggedIn}/>
       <AuctionSection />
       <DescriptionSection />
       <TopCreators />
