@@ -2,10 +2,12 @@ import Template from "../components/Template";
 import SignUp from "../assets/png/signup.png";
 import bgImg from "../assets/img/bg-img.jpg";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 // eslint-disable-next-line react/prop-types
 const SignupPage = ({ setIsLoggedIn }) => {
+  const lightmode = useSelector((state) => state.theme.lightTheme);
   return (
     <>
        <div className="md:block relative">
@@ -17,7 +19,7 @@ const SignupPage = ({ setIsLoggedIn }) => {
           </p>
         </div>
       </div>
-      <div className="bg-vulcan-950 h-[calc(100vh-64px)] flex items-start">
+      <div className={`${lightmode ? `bg-vulcan-50` : `bg-vulcan-950`}  h-[calc(100vh-64px)] flex items-start`}>
         <Template
           title="Join the millions learning to code with Centumo NFT"
           desc1="Build skills for today, tomorrow, and beyond."

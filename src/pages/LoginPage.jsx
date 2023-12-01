@@ -2,9 +2,11 @@ import Template from "../components/Template";
 import loginImg from "../assets/png/login.png";
 import bgImg from "../assets/img/bg-img.jpg";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 // eslint-disable-next-line react/prop-types
 const LoginPage = ({ setIsLoggedIn }) => {
+  const lightmode = useSelector((state) => state.theme.lightTheme);
   return (
     <>
       <div className="md:block relative">
@@ -16,7 +18,11 @@ const LoginPage = ({ setIsLoggedIn }) => {
           </p>
         </div>
       </div>
-      <div className="bg-vulcan-950 h-[calc(100vh-64px)] flex items-start">
+      <div
+        className={`${
+          lightmode ? `bg-vulcan-50` : `bg-vulcan-950`
+        } h-[calc(100vh-64px)] flex items-start`}
+      >
         <Template
           title="Welcome Back"
           desc1="Build skills for today, tomorrow, and beyond."

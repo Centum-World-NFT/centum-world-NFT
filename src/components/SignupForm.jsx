@@ -3,12 +3,14 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { EyeIcon, EyeSlash } from "../utils/icons";
 import { signUp } from "../redux/slices/auth";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
+// eslint-disable-next-line react/prop-types
 function SignupForm({ setIsLoggedIn }) {
   const [accountType, setAccountType] = useState("user");
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const lightmode = useSelector((state) => state.theme.lightTheme);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -38,6 +40,7 @@ function SignupForm({ setIsLoggedIn }) {
       return;
     }
 
+    // eslint-disable-next-line no-useless-catch
     try {
       const { confirmPassword, ...accountData } = formData;
       accountData.role = accountType;
@@ -54,7 +57,7 @@ function SignupForm({ setIsLoggedIn }) {
         }
       }
     } catch (error) {
-      throw error
+      throw error;
     }
   }
 
@@ -197,7 +200,11 @@ function SignupForm({ setIsLoggedIn }) {
             </span>
           </label>
         </div>
-        <button className="border mt-2 border-violet-600 rounded-full px-5 py-2 text-vulcan-50 font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out">
+        <button
+          className={`border mt-2 border-violet-600 rounded-full px-5 py-2 ${
+            lightmode ? `text-vulcan-950` : `text-vulcan-50`
+          }  font-Poppins hover:bg-gradient-to-r from-violet-600 to-indigo-600 duration-700 transition-all hover:border-vulcan-50 ease-in-out`}
+        >
           Create Account
         </button>
       </form>

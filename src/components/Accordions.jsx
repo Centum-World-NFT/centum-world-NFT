@@ -1,18 +1,28 @@
 import { useState } from "react";
 import { DownArrow, UpArrow, accordionQuestion } from "../utils/constant";
+import { useSelector } from "react-redux";
 
 const Accordions = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const lightmode = useSelector((state) => state.theme.lightTheme);
 
   const handleItemClick = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
   return (
-    <div className="bg-vulcan-950 py-10 border-t border-vulcan-50 border-opacity-20">
+    <div
+      className={`${
+        lightmode ? `bg-vulcan-50` : `bg-vulcan-950`
+      } py-10 border-t border-vulcan-50 border-opacity-20`}
+    >
       <div className="w-4/5 m-auto">
         <div className="flex justify-center">
-          <p className="font-Poppins text-vulcan-50 text-4xl font-bold">
+          <p
+            className={`font-Poppins ${
+              lightmode ? `text-vulcan-950` : `text-vulcan-50`
+            }  text-4xl font-bold`}
+          >
             Frequently Asked Questions
           </p>
         </div>
@@ -24,7 +34,7 @@ const Accordions = () => {
             >
               <h2 className="text-lg font-semibold font-Poppins text-vulcan-100">
                 <span className="bg-vulcan-950 p-2 rounded-md mr-2 font-Poppins">
-                  {index+1}
+                  {index + 1}
                 </span>
                 {item.question}
               </h2>
