@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { NavMenu } from "../utils/constant";
 
 // eslint-disable-next-line react/prop-types
