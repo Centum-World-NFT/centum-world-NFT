@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="w-full flex items-center justify-between gap-5 flex-wrap">
           <div className="md:w-1/5 w-full flex justify-center flex-col md:mr-24">
             <p className="text-vulcan-50 font-Poppins font-bold text-3xl">
-              Centum NFT
+              Centumo NFT
             </p>
             <p className="text-vulcan-50 font-Poppins text-sm mt-5 text-justify">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.

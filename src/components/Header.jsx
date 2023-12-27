@@ -60,7 +60,7 @@ const Header = () => {
               lightmode ? `text-vulcan-950` : `text-vulcan-50`
             } font-Poppins font-bold text-2xl`}
           >
-            Centum NFT
+            Centumo NFT
           </p>
           <div className="block md:hidden">
             {showMenu ? (
