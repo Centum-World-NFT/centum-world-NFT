@@ -44,7 +44,7 @@ const ContentSection = ({ isLoggedIn }) => {
                   I&apos;m a User
                 </button>
               </a>
-              <a href="http://capps.centumonftnirmatam.com" target="_blank">
+              <a href="http://centumonftnirmatam.com" target="_blank">
                 <button
                   className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
                     lightmode ? `text-vulcan-950` : `text-vulcan-50`

@@ -27,7 +27,7 @@ const Header = () => {
 
   const link = (title) =>{
     if(title === "Nirmatam"){
-      const url = "http://capps.centumonftnirmatam.com";
+      const url = "http://centumonftnirmatam.com";
       window.open(url, "_blank"); 
     }
 
