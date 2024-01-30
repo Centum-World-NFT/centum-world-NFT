@@ -5,10 +5,15 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 import creatorAV from "../assets/img/creatorAV.jpg";
 import ReactStars from "react-rating-stars-component";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { allPlaylist } from "../redux/slices/fetchPlaylistSlice";
+
 
 const TopCreators = () => {
   const lightmode = useSelector((state) => state.theme.lightTheme);
+  const dispatch = useDispatch();
+  const [data, setData] = useState([]);
   const breakpoints = {
     320: {
       slidesPerView: 2,
@@ -23,6 +28,19 @@ const TopCreators = () => {
       slidesPerView: 4,
     },
   };
+  useEffect(()=>{
+    const callAllPlaylist = async ()=>{
+      try {
+        const response = await dispatch(allPlaylist())
+        console.log(response.payload.playlists)
+        setData(response.payload.playlists)
+      } catch (error) {
+        
+      }
+    }
+
+    callAllPlaylist()
+  },[dispatch])
   return (
     <div
       className={`w-full ${
@@ -79,7 +97,7 @@ const TopCreators = () => {
             modules={[FreeMode, Pagination, Autoplay]}
             className="mySwiper"
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+            {data.map((item, index) => (
               <>
                 <SwiperSlide key={index}>
                   <div className="md:flex-row flex-col items-center gap-2 w-max">
@@ -90,7 +108,7 @@ const TopCreators = () => {
                           lightmode ? `text-vulcan-950` : `text-vulcan-50`
                         }  font-medium text-center`}
                       >
-                        Jhone Doe
+                        {item.creatorId.firstName}{" "}{item.creatorId.surName}
                       </p>
                       <ReactStars
                         count={5}

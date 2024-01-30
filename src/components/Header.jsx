@@ -9,13 +9,14 @@ import {
 } from "../utils/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { setLightThemeDark } from "../redux/slices/theme";
+import { useNavigate } from "react-router";
 
 // eslint-disable-next-line react/prop-types
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const dispatch = useDispatch();
   const lightmode = useSelector((state) => state.theme.lightTheme);
-
+  const navigate = useNavigate();
   const handleToggle = () => {
     setShowMenu((prev) => !prev);
   };
@@ -23,6 +24,19 @@ const Header = () => {
   const handleModeToggle = () => {
     dispatch(setLightThemeDark());
   };
+
+  const link = (title) =>{
+    if(title === "Nirmatam"){
+      const url = "http://capps.centumonftnirmatam.com";
+      window.open(url, "_blank"); 
+    }
+
+    if(title === "Vidyanam"){
+      const url = "http://apps.centumonftnirmatam.com";
+      window.open(url, "_blank"); 
+    }
+    
+  }
 
   return (
     <>
@@ -84,9 +98,10 @@ const Header = () => {
                   <li
                     className="flex items-center justify-between cursor-pointer"
                     key={item.id}
+                    onClick={()=>link(item.title)}
                   >
                     {item.title}
-                    <DropDownIcon />
+                    
                   </li>
                 </>
               ))}

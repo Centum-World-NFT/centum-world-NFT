@@ -10,10 +10,12 @@ const Footer = () => {
               Centumo NFT
             </p>
             <p className="text-vulcan-50 font-Poppins text-sm mt-5 text-justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Reiciendis atque similique suscipit asperiores, aliquid cum
-              necessitatibus fugit fuga maiores distinctio fugiat officia ex
-              pariatur dolorem consequatur quos
+              CENTUMO NFTs is related to the creation or trading of non-fungible
+              tokens (NFTs), which are unique digital assets representing
+              ownership of digital or physical items, such as artwork, music,
+              virtual real estate, collectibles, and more. These tokens are
+              stored on a blockchain, providing proof of ownership and ensuring
+              their scarcity and authenticity.
             </p>
           </div>
 

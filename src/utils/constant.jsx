@@ -114,7 +114,8 @@ export const NavMenu = [
   },
   {
     id: 3,
-    title: "Creators"
+    title: "Nirmatam",
+    link: "capps.centumonftnirmatam.com"
   },
   {
     id: 4,

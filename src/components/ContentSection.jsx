@@ -31,7 +31,7 @@ const ContentSection = ({ isLoggedIn }) => {
         <div className="flex justify-end gap-2">
           {!isLoggedIn && (
             <>
-              <a href="https://centum-world-nft-subscriber-portal-zoww.vercel.app/">
+              <a href="http://apps.centumonftnirmatam.com" target="_blank">
                 <button
                   className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
                     lightmode ? `text-vulcan-950` : `text-vulcan-50`
@@ -44,7 +44,7 @@ const ContentSection = ({ isLoggedIn }) => {
                   I&apos;m a User
                 </button>
               </a>
-              <a href="https://centum-world-nft-creator.netlify.app/">
+              <a href="http://capps.centumonftnirmatam.com" target="_blank">
                 <button
                   className={`border mt-10 bg-vulcan-0 border-violet-600 rounded-full px-5 py-2 ${
                     lightmode ? `text-vulcan-950` : `text-vulcan-50`
